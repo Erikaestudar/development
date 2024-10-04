@@ -24,8 +24,8 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Links
 
-- Solution URL: [](https://github.com/Erikaestudar/development/tree/main/qr-code-component-main)
-- Live Site URL: [](https://erikaestudar.github.io/development/qr-code-component-main/index.html)
+- Solution URL: [GitHub](https://github.com/Erikaestudar/development/tree/main/qr-code-component-main)
+- Live Site URL: [Site](https://erikaestudar.github.io/development/qr-code-component-main/index.html)
 
 ## My process
 
@@ -59,13 +59,13 @@ I want to continue to improve HTML and CSS more and more, learn JavaScript.
 
 ### Useful resources
 
-- [](https://www.youtube.com/c/CursoemV%C3%ADdeo/playlists) - This helped me develop my knowledge. I really liked this pattern and will use it going forward.
-- [](https://github.com/gustavoguanabara/html-css/tree/master/aulas-pdf) - This is an amazing article which helped me finally understand HTML and CSS. I'd recommend it to anyone still learning this concept.
+- [Curso em Video](https://www.youtube.com/c/CursoemV%C3%ADdeo/playlists) - This helped me develop my knowledge. I really liked this pattern and will use it going forward.
+- [PDF](https://github.com/gustavoguanabara/html-css/tree/master/aulas-pdf) - This is an amazing article which helped me finally understand HTML and CSS. I'd recommend it to anyone still learning this concept.
 
 ## Author
 
-- Website - [](https://erikaestudar.github.io/development/qr-code-component-main/index.html)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/Erikaestudar)
+- Website - [Erikaestudar](https://erikaestudar.github.io/development/qr-code-component-main/index.html)
+- Frontend Mentor - [@Erikaestudar](https://www.frontendmentor.io/profile/Erikaestudar)
 
 ## Acknowledgments
 
