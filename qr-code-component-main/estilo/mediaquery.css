@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    body {
+        background-color: hsl(216, 15%, 48%)
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        background-color: hsl(218, 44%, 22%);
+    }
+
+    main {
+        width: 430px;
+        transition: width 0.3s, height 0.3s;
+        transition-timing-function: ease;
+    }
+
+    h1, p {
+        max-width: 400px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 23px;
+    }
+
+    div.attribution {
+        font-size: 14px;
+    }
+}

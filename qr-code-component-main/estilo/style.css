@@ -19,6 +19,8 @@ body {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+
+    transition: background-color 0.5s;
 }
 
 main {
@@ -44,12 +46,14 @@ h1, p {
 
 h1 {
     font-size: 20px;
+    font-weight: 700;
     padding: 10px;
 }
 
 p {
     text-indent: 2px;
     font-size: 15px;
+    font-weight: 400;
     padding: 10px 0px;
 }
 
