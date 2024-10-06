@@ -57,7 +57,7 @@ article.imagem{
     box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.300);
 }
 
-p#destaque {
+article.text p#destaque {
     background-color: var(--cor2);
     padding: 8px 20px;
     margin-top: 30px;
@@ -68,19 +68,28 @@ p#destaque {
     font-weight: 700;
 }
 
-h1 {
+article.text h1 {
     font-size: 1.3em;
     font-weight: 800;
     padding: 10px;
     margin-left: 3px;
 }
 
-p {
+article.text p {
     font-size: 0.9em;
     font-weight: 500;
     padding: 10px;
     line-height: 1.4em;
     margin-left: 3px;
+}
+
+article.text a {
+    color: black;
+    text-decoration: none;
+}
+
+article.text a:hover {
+    color: var(--cor2);
 }
 
 article.perfil {
