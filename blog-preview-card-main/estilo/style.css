@@ -17,57 +17,65 @@
 
 body {
     background-color: var(--cor2);
+    font-family: var(--font);
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    font-family: var(--font);
 }
 
 main {
     background-color: var(--cor1);
-    width: 380px;
-    height: 540px;
+    background-size: cover;
+    width: 366px;
+    height: 535px;
     padding: 10px;
     margin: 10px 0px;
     border-radius: 20px;
     border: 1px solid black;
     box-shadow: 7px 7px 0px black;
+
+    transition: width .3s, height .3s;
+    transition-timing-function: ease;
 }
 
 article.imagem{
-    width: 336px;
-    height: 201px;
+    width: 320px;
+    height: 191px;
     display: block;
     margin: auto;
-    margin-top: 12px;
+    margin-top: 11px;
     border-radius: 10px;
     overflow: hidden;
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.301);
 }
 
 p#destaque {
     background-color: var(--cor2);
     padding: 8px 20px;
-    margin: 0px 10px;
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: 13px;
     width: 100px;
     border-radius: 5px;
     font-weight: 600;
 }
 
 h1 {
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: 800;
-    padding: 11px;
+    padding: 10px;
+    margin-left: 3px;
 }
 
 p {
-    font-size: 1em;
+    font-size: 0.9em;
     font-weight: 500;
-    padding: 11px;
+    padding: 10px;
     line-height: 1.4em;
+    margin-left: 3px;
 }
 
 article.perfil {
@@ -88,6 +96,16 @@ article.perfil > p {
     padding: 5px;
 }
 
+article.perfil a {
+    color: black;
+    text-decoration: none;
+}
+
+article.perfil a:hover {
+    color: var(--cor3);
+    text-decoration: underline;
+}
+
 div.attribution {
     font-size: 0.8em; 
     text-align: center;
@@ -99,5 +117,6 @@ div.attribution a {
 }
 
 div.attribution a:hover {
+    color: var(--cor1);
     text-decoration: underline;
 }
