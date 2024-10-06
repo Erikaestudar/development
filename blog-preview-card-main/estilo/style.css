@@ -1,6 +1,11 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap'); */
+
+@font-face {
+    font-family: "Figtree";
+    src: url("../assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype"), url("../assets/fonts/Figtree-Italic-VariableFont_wght.ttf") format("truetype"), url("../assets/fonts/static/Figtree-Bold.ttf") format("truetype"), url("../assets/fonts/static/Figtree-SemiBold.ttf") format("truetype"), url("../assets/fonts/static/Figtree-ExtraBold.ttf") format("truetype"), ;
+}
 
 * {
     margin: 0px;
@@ -60,7 +65,7 @@ p#destaque {
     margin-left: 13px;
     width: 100px;
     border-radius: 5px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 h1 {
