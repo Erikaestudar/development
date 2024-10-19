@@ -4,6 +4,7 @@
     font-family: "Inter";
     src: url(assets/fonts/static/Inter-Regular.ttf) format("truetype"), url(assets/fonts/static/Inter-SemiBold.ttf) format("truetype"), url(assets/fonts/static/Inter-Bold.ttf) format("truetype"), url(assets/fonts/Inter-VariableFont_slnt\,wght.ttf) format("truetype"),;
 }
+
 * {
     margin: 0px;
     padding: 0px;
@@ -17,8 +18,7 @@
     --cor03: hsl(0, 0%, 8%);
     --cor04: hsl(75, 94%, 57%);
     --cor05: hsl(202, 45%, 44%);
-    --font: "Inter", sans-serif;
-    
+    --font: "Inter", sans-serif; 
 }
 
 body {
@@ -35,8 +35,8 @@ body {
 main {
     background-color: var(--cor02);
     color: var(--cor00);
-    width: 310px;
-    height: 500px;
+    width: 312px;
+    height: 492px;
     border-radius: 10px;
 }
 
@@ -78,8 +78,8 @@ nav a {
     font-size: 0.8em;
     font-weight: 400;
     width: 80%;
-    margin: 7px;
-    padding: 10px;
+    margin: 6px;
+    padding: 11px;
     border-radius: 5px;
     text-decoration: none;
     text-align: center;
@@ -95,7 +95,8 @@ nav a:hover {
 footer div.attribution { 
     color: var(--cor00);
     font-size: 0.7em; 
-    text-align: center; 
+    text-align: center;
+    margin-top: 12px; 
 }
 
 footer div.attribution a { 
