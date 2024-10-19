@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Inter";
+    src: url(assets/fonts/static/Inter-Regular.ttf) format("truetype"), url(assets/fonts/static/Inter-SemiBold.ttf) format("truetype"), url(assets/fonts/static/Inter-Bold.ttf) format("truetype"), url(assets/fonts/Inter-VariableFont_slnt\,wght.ttf) format("truetype"),;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor00: hsl(0, 0%, 100%);
+    --cor01: hsl(0, 0%, 20%);
+    --cor02: hsl(0, 0%, 12%);
+    --cor03: hsl(0, 0%, 8%);
+    --cor04: hsl(75, 94%, 57%);
+    --cor05: hsl(202, 45%, 44%);
+    --font: "Inter", sans-serif;
+    
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--cor03);
+    font-family: var(--font);
+}
+
+main {
+    background-color: var(--cor02);
+    color: var(--cor00);
+    width: 310px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+section {
+    text-align: center;
+}
+
+section img {
+    width: 25%;
+    border-radius: 50%;
+    margin-top: 10%;
+}
+
+section h1 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+section h2, p {
+    font-size: 0.7em;
+    padding: 10px;
+}
+
+section h2 {
+    color: var(--cor04);
+}
+
+nav {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;   
+}
+
+nav a {
+    background-color: var(--cor01);
+    color: var(--cor00);
+    font-size: 0.8em;
+    font-weight: 400;
+    width: 80%;
+    margin: 7px;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: var(--cor04);
+    color: black;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+footer div.attribution { 
+    color: var(--cor00);
+    font-size: 0.7em; 
+    text-align: center; 
+}
+
+footer div.attribution a { 
+    color: var(--cor04);
+    text-decoration: none; 
+}
+
+footer div.attribution a:hover {
+    color: var(--cor05);
+    text-decoration: underline;
+}
