@@ -35,8 +35,8 @@ body {
 main {
     background-color: var(--cor02);
     color: var(--cor00);
-    width: 312px;
-    height: 492px;
+    width: 332px;
+    height: 530px;
     border-radius: 10px;
 }
 
@@ -51,13 +51,13 @@ section img {
 }
 
 section h1 {
-    font-size: 1.2em;
+    font-size: 1.6em;
     font-weight: 600;
     margin-top: 15px;
 }
 
 section h2, p {
-    font-size: 0.7em;
+    font-size: 0.8em;
     padding: 10px;
 }
 
@@ -79,7 +79,7 @@ nav a {
     font-weight: 400;
     width: 80%;
     margin: 6px;
-    padding: 11px;
+    padding: 12px;
     border-radius: 5px;
     text-decoration: none;
     text-align: center;
