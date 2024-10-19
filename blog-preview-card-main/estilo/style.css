@@ -34,8 +34,8 @@ body {
 main {
     background-color: var(--cor1);
     background-size: cover;
-    width: 366px;
-    height: 535px;
+    width: 364px;
+    height: 533px;
     padding: 10px;
     margin: 10px 0px;
     border-radius: 20px;
@@ -46,7 +46,7 @@ main {
     transition-timing-function: ease;
 }
 
-article.imagem{
+figure {
     width: 320px;
     height: 191px;
     display: block;
