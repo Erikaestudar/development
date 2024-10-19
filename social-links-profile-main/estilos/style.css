@@ -35,8 +35,8 @@ body {
 main {
     background-color: var(--cor02);
     color: var(--cor00);
-    width: 332px;
-    height: 530px;
+    width: clamp(300px, 90%, 332px);
+    height: clamp(498px, 90%, 530px);
     border-radius: 10px;
 }
 
@@ -65,14 +65,15 @@ section h2 {
     color: var(--cor04);
 }
 
-nav {
+ul li {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
+    list-style-type: none;   
 }
 
-nav a {
+ul li a {
     background-color: var(--cor01);
     color: var(--cor00);
     font-size: 0.9em;
@@ -81,11 +82,11 @@ nav a {
     margin: 7px;
     padding: 11px;
     border-radius: 5px;
-    text-decoration: none;
     text-align: center;
+    text-decoration: none;
 }
 
-nav a:hover {
+ul li a:hover {
     background-color: var(--cor04);
     color: black;
     cursor: pointer;
