@@ -36,7 +36,8 @@ main {
     background-color: var(--cor02);
     color: var(--cor00);
     width: clamp(300px, 90%, 332px);
-    height: clamp(498px, 90%, 530px);
+    height: clamp(510px, 90%, 525px);
+
     border-radius: 10px;
 }
 
