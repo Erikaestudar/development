@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(214, 209, 209);
+}
+
+main {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed red;
+}
+header {
+    background: url("../images/bg-mobile-light.jpg") center top no-repeat;
+    background-size: cover;
+    color: white;
+    width: 100%;
+    height: 15rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed rgb(153, 0, 255);
+}
+
+header img {
+    width: 1.8rem;
+    border: 2px dashed rgb(153, 0, 255);
+}
+
+
+footer { 
+    font-size: 11px; 
+    text-align: center; }
+footer a { 
+    color: hsl(228, 45%, 44%); 
+}
