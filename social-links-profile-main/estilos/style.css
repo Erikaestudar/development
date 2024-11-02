@@ -26,6 +26,7 @@ body {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    flex: 0 0;
     width: 100vw;
     height: 100vh;
     background-color: var(--cor03);
@@ -35,30 +36,31 @@ body {
 main {
     background-color: var(--cor02);
     color: var(--cor00);
-    width: clamp(300px, 90%, 332px);
-    height: clamp(510px, 90%, 525px);
-    border-radius: 10px;
+    width: clamp(19rem, 90%, 23rem);
+    height: clamp(35rem, 90%, 36rem);
+    border-radius: 0.63rem;
 }
 
 section {
     text-align: center;
+    margin-bottom: 0.9rem;
 }
 
 section img {
-    width: 25%;
+    width: 28%;
     border-radius: 50%;
     margin-top: 10%;
 }
 
 section h1 {
-    font-size: 1.4em;
+    font-size: 1.4rem;
     font-weight: 600;
-    margin-top: 15px;
+    margin-top: 0.94rem;
 }
 
 section h2, p {
-    font-size: 0.8em;
-    padding: 10px;
+    font-size: 0.9rem;
+    padding: 0.63rem;
 }
 
 section h2 {
@@ -76,12 +78,12 @@ ul li {
 ul li a {
     background-color: var(--cor01);
     color: var(--cor00);
-    font-size: 0.9em;
+    font-size: 0.9rem;
     font-weight: 400;
     width: 80%;
-    margin: 7px;
-    padding: 11px;
-    border-radius: 5px;
+    margin: 0.44rem;
+    padding: 0.69rem;
+    border-radius: 0.32rem;
     text-align: center;
     text-decoration: none;
 }
@@ -94,10 +96,11 @@ ul li a:hover {
 }
 
 footer div.attribution { 
+    position: sticky;
     color: var(--cor00);
-    font-size: 0.7em; 
+    font-size: 0.7rem; 
     text-align: center;
-    margin-top: 12px; 
+    margin-top: 0.75rem; 
 }
 
 footer div.attribution a { 
