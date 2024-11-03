@@ -73,12 +73,12 @@ header img {
 }
 
 section {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    flex: auto;
     margin-top: -6.6rem;
+}
+
+section p {
+    display: block;
+    text-align: center;
 }
 
 form p input {
