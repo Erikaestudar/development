@@ -5,9 +5,10 @@
 :root {
     --LightGray: hsl(0, 0%, 98%);
     --LightGrayishBlue: hsl(236, 33%, 92%);
-    --LightGrayishBlue: hsl(233, 11%, 84%);
+    --LightGrayishBlue2: hsl(233, 11%, 84%);
     --DarkGrayishBlue: hsl(236, 9%, 61%);
-    --DarkGrayishBlue: hsl(235, 19%, 35%);
+    --DarkGrayishBlue2: hsl(235, 19%, 35%);
+    --Blue:  hsl(228, 45%, 44%);
     --font: "Josefin Sans", sans-serif;
 }
 
@@ -30,48 +31,109 @@ main {
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+    color: var(--DarkGrayishBlue2);
     border: 2px dashed red;
+    font-size: 1.1rem;
 }
 
 header {
     background: url("../images/bg-mobile-light.jpg") center top no-repeat;
     background-size: cover;
-    color: white;
+    color: var(--LightGray);
     width: 100%;
-    height: 15rem;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
+    height: 14rem;
+}
+
+nav {
+    width: 21rem;
+    margin: auto;
+    padding-top: 4.4rem;
+    border: 2px dashed rgb(153, 0, 255);
 }
 
 header h1 {
     font-size: 2.2rem;
     font-weight: 700;
+    padding: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6rem;
+    display: inline;
+    margin-right: 8.3rem;
 }
 
 header img {
-    width: 1.8rem;
+    width: 1.6rem;
     border: 2px dashed rgb(153, 0, 255);
 }
 
-nav {
-    width: 22rem;
+section {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    flex: auto;
+    margin-top: -6.6rem;
+}
+
+form p input {
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+    padding: 1.2rem;
+    width: 21rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+article {
+    font-size: 1.1rem;
+    width: 21rem;
+    padding: 0.8rem;
+    margin: 0.3rem;
+    border-radius: 0.5rem;
+    background-color: var(--LightGray);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.247);
+}
+
+article.list {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    flex: auto;
     border: 2px dashed rgb(153, 0, 255);
 }
-article {
-    background-color: var(--LightGray);
-}
-footer { 
 
-    font-size: 11px; 
+article.menu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    flex: auto;
+    margin-bottom: 2.9rem;
+    border: 2px dashed rgb(153, 0, 255);
+}
+
+button {
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: var(--LightGray);
+    color: var(--DarkGrayishBlue2);
+    border: none;
+}
+button:hover {
+    color: var(--Blue);
+}
+.menu button {
+    margin-right: 1.4rem;
+}
+
+footer { 
+    margin-top: 50%;
+    font-size: 0.8rem; 
     text-align: center; 
     border: 2px dashed rgb(51, 83, 3);
 }
 footer a { 
-    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+    color: var(--Blue); 
 }

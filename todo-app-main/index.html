@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="estilos/style.css">
+  <link rel="stylesheet" href="estilos/mediaquery.css">
   
   <title>Frontend Mentor | Todo app</title>
 
@@ -19,16 +20,19 @@
 </header>
 <main>
   <section>
-    <article>
-      
-          items left<!-- Add dynamic number -->
-          Clear Completed
+    <form method="post" autocomplete="on">
+      <p>
+        <label for="itodo"></label>
+        <input name="todo" id="itodo" type="text" placeholder="Create a new todo..."></p>
+    </form>
+    <article class="list">
+          <button type="button">items left</button><!-- Add dynamic number -->
+          <button type="button">Clear Completed</button>
     </article>
-    <article>
-      All
-      Active
-      Completed
-      
+    <article class="menu">
+      <button type="button"> All</button>
+      <button type="button"> Active</button>
+      <button type="button"> Completed</button>
     </article>
       <p>Drag and drop to reorder list</p>
   </section>

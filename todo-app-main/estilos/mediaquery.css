@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+@media screen and (min-width:375px) {
+    header {
+        background: url("../images/bg-desktop-light.jpg") center top no-repeat;
+        background-size: cover;
+    }
+    nav {
+        width: 28rem;
+    }
+
+    header h1 {
+        margin-right: 15.3rem;
+    }
+    
+    form p input {
+        width: 28rem;
+    }
+
+    article {
+        width: 28rem;
+    }
+    
+}
