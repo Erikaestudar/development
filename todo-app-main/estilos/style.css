@@ -23,7 +23,7 @@ body {
     width: 100vw;
     height: 100vh;
     font-family: var(--font);
-    background-color: var(--LightGrayishBlue);
+    background-color: var(--LightGray);
 }
 
 main {
@@ -40,15 +40,18 @@ header {
     background: url("../images/bg-mobile-light.jpg") center top no-repeat;
     background-size: cover;
     color: var(--LightGray);
-    width: 100%;
+    width: 100vw;
     height: 14rem;
 }
 
 nav {
-    width: 21rem;
+    width: 17rem;
     margin: auto;
     padding-top: 4.4rem;
     border: 2px dashed rgb(153, 0, 255);
+
+    transition: width 0.2s, height .2s;
+    transition-timing-function: ease;
 }
 
 header h1 {
@@ -58,7 +61,10 @@ header h1 {
     text-transform: uppercase;
     letter-spacing: 0.6rem;
     display: inline;
-    margin-right: 8.3rem;
+    margin-right: 4.3rem;
+
+    transition: margin .2s;
+    transition-timing-function: ease;
 }
 
 header img {
@@ -76,22 +82,28 @@ section {
 }
 
 form p input {
-    font-size: 1.1rem;
+    width: 17rem;
+    font-size: 1rem;
     margin-bottom: 0.6rem;
-    padding: 1.2rem;
-    width: 21rem;
+    padding: 1rem;
     border: none;
     border-radius: 0.5rem;
+
+    transition: width 0.2s, height .2s;
+    transition-timing-function: ease;
 }
 
 article {
     font-size: 1.1rem;
-    width: 21rem;
+    width: 17rem;
     padding: 0.8rem;
     margin: 0.3rem;
     border-radius: 0.5rem;
-    background-color: var(--LightGray);
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.247);
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0px 10px 19px hsla(237, 9%, 61%, 0.555);
+
+    transition: width 0.2s, height .2s;
+    transition-timing-function: ease;
 }
 
 article.list {
@@ -116,13 +128,18 @@ article.menu {
 button {
     font-size: 1rem;
     font-weight: 400;
-    background-color: var(--LightGray);
+    background-color: hsl(0, 0%, 100%);
     color: var(--DarkGrayishBlue2);
     border: none;
 }
-button:hover {
-    color: var(--Blue);
+
+article button:hover {
+    color: hsl(221, 100%, 50%);
+    font-weight: 500;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 2px hsla(237, 9%, 61%, 0.250);
 }
+
 .menu button {
     margin-right: 1.4rem;
 }
@@ -133,6 +150,7 @@ footer {
     text-align: center; 
     border: 2px dashed rgb(51, 83, 3);
 }
+
 footer a { 
     text-decoration: none;
     color: var(--Blue); 

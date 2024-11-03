@@ -1,24 +1,113 @@
 @charset "UTF-8";
 
-@media screen and (min-width:375px) {
+@media screen and (min-width:375px) and (max-width:625px){
     header {
         background: url("../images/bg-desktop-light.jpg") center top no-repeat;
         background-size: cover;
     }
+
     nav {
-        width: 28rem;
+        width: 25rem;
     }
 
     header h1 {
-        margin-right: 15.3rem;
+        margin-right: 12.4rem;
     }
     
     form p input {
-        width: 28rem;
+        width: 25rem;
+        font-size: 1.1rem;
     }
 
     article {
-        width: 28rem;
+        width: 25rem;
     }
     
+}
+
+@media screen and (min-width:625px) and (max-width:1023px){
+    header {
+        background: url("../images/bg-desktop-light.jpg") center top no-repeat;
+        background-size: cover;
+    }
+
+    nav {
+        width: 34rem;
+    }
+
+    header h1 {
+        margin-right: 21.4rem;
+    }
+    
+    form p input {
+        width: 34rem;
+        font-size: 1.2rem;
+        padding: 1.2rem;
+    }
+
+    article {
+        width: 34rem;
+    }
+    
+}
+
+@media screen and (min-width:1024px) {
+    header {
+        background: url("../images/bg-desktop-light.jpg") center top no-repeat;
+        background-size: cover;
+    }
+
+    main {
+        display: grid;
+        grid-template-rows: auto auto;
+    }
+
+    nav {
+        width: 34rem;
+    }
+
+    header h1 {
+        margin-right: 21.4rem;
+    }
+    
+    form p input {
+        width: 34rem;
+    }
+
+    article {
+        width: 34rem;
+    }
+    
+    article.list {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+    }
+
+    /*
+    article.menu {
+        display: none;
+    }
+    */
+    
+    #item-1 {
+        grid-column-start: 1;
+        border: 2px solid green;
+    }
+    #item-2 {
+        grid-column-start: 5;
+        border: 2px solid green;
+    }
+    #item-3 {
+        display: block;
+        grid-column-start: 2;
+        border: 2px solid green;
+    }
+    #item-4 {
+        border: 2px solid green;
+    }
+    #item-5 {
+        border: 2px solid green;
+    }
+
+
 }
