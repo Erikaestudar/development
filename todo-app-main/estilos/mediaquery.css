@@ -51,29 +51,40 @@
     
 }
 
-@media screen and (min-width:1024px) {
-    header {
-        background: url("../images/bg-desktop-light.jpg") center top no-repeat;
-        background-size: cover;
-    }
-
+@media screen and (min-width:1024px) {    
     main {
         display: grid;
         grid-template-rows: auto auto;
     }
 
+    header {
+        background: url("../images/bg-desktop-light.jpg") center top no-repeat;
+        background-size: cover;
+        height: 21rem;
+    }
+
     nav {
         width: 34rem;
+        padding-top: 5rem ;
     }
 
     header h1 {
-        margin-right: 21.4rem;
+        font-size: 2.8rem;
+        margin-right: 19.4rem;
     }
-    
+
+    header img {
+        width: 1.8rem;
+    }
+
     form p input {
         width: 34rem;
         font-size: 1.2rem;
         padding: 1.2rem;
+    }
+
+    section {
+        margin-top: -12.2rem;
     }
 
     article {
@@ -81,15 +92,17 @@
     }
     
     article.list {
+        margin-top: 1.5rem;
+        margin-bottom: 3.8rem;
         display: grid;
         grid-template-columns: auto auto auto auto auto;
     }
 
-    /*
     article.menu {
         display: none;
+
     }
-    */
+    
     
     #item-1 {
         grid-column-start: 1;
@@ -110,6 +123,5 @@
     #item-5 {
         border: 2px solid green;
     }
-
 
 }
