@@ -19,7 +19,7 @@
         font-size: 1.1rem;
     }
 
-    article {
+    div {
         width: 25rem;
     }
     
@@ -45,7 +45,7 @@
         padding: 1.2rem;
     }
 
-    article {
+    div {
         width: 34rem;
     }
     
@@ -87,20 +87,19 @@
         margin-top: -12.2rem;
     }
 
-    article {
+    div {
         width: 34rem;
     }
     
-    article.list {
+    div.todo {
         margin-top: 1.5rem;
         margin-bottom: 3.8rem;
         display: grid;
         grid-template-columns: auto auto auto auto auto;
     }
 
-    article.menu {
+    div.menu {
         display: none;
-
     }
     
     

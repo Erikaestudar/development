@@ -97,7 +97,7 @@ form p input {
     transition-timing-function: ease;
 }
 
-article {
+div {
     font-size: 1.1rem;
     width: 17rem;
     padding: 0.8rem;
@@ -110,16 +110,14 @@ article {
     transition-timing-function: ease;
 }
 
-article.list {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    flex: auto;
-    border: 2px dashed rgb(153, 0, 255);
+div.todo {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto auto auto auto;
+    border: 2px dashed rgb(0, 132, 255);
 }
 
-article.menu {
+div.menu {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -127,6 +125,20 @@ article.menu {
     flex: auto;
     margin-bottom: 2.9rem;
     border: 2px dashed rgb(153, 0, 255);
+}
+
+.list {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+#item-1 {
+    grid-column-start: 1;
+    border: 2px solid green;
+}
+#item-2 {
+    grid-column-start: 5;
+    border: 2px solid green;
 }
 
 button {
@@ -137,7 +149,7 @@ button {
     border: none;
 }
 
-article button:hover {
+div button:hover {
     color: hsl(221, 100%, 50%);
     font-weight: 500;
     box-sizing: border-box;
