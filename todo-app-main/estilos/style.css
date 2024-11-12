@@ -9,9 +9,7 @@
     --DarkGrayishBlue: hsl(236, 9%, 61%);
     --DarkGrayishBlue2: hsl(235, 19%, 35%);
     --Blue:  hsl(228, 45%, 44%);
-    --font: "Josefin Sans", sans-serif;
 }
-
 
 * {
     margin: 0px;
@@ -22,8 +20,6 @@
 body {
     width: 100vw;
     height: 100vh;
-    font-family: var(--font);
-    background-color: var(--LightGray);
 }
 
 main {
