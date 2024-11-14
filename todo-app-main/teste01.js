@@ -14,12 +14,9 @@ form.addEventListener('submit', function(e) {
 
 input.addEventListener('keyup', function(e) {if (e.key === 'Enter' && input.value.trim() !== '') {
     const li = document.createElement('li')
-    li.classList.add(`list-item`)
+    li.classList.add('list-item')
     li.textContent = input.value
-    li.style.fontSize = '1.2rem'
-    li.style.listStylePosition = 'inside'
-    li.style.marginBottom = '0.75rem'
-    li.style.marginLeft = '0.9rem'
+
 
     list.appendChild(li)
     input.value = ''

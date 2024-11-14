@@ -114,6 +114,38 @@ div.check_box {
     border: 2px dashed rgb(0, 132, 255);
 }
 
+ul.list {
+    list-style: none;
+    padding: 0px;
+    margin-left: -16px;
+    width: 180%;
+    border: 1px dashed blue;
+}
+
+ul li {
+    font-size: 1.2rem;
+    list-style-position: inside;
+    border-bottom: 1px solid var(--DarkGrayishBlue);
+    padding: .4rem 0;
+    text-indent: 3rem;
+    /*user-select: none;*/
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    width: 1.75rem;
+    height: 1.75rem;
+    border: 2px dashed red;
+    
+}
+
+ul.list li:last-child {
+    margin-bottom: 0.5rem;
+}
+
 div.menu {
     display: flex;
     flex-flow: row nowrap;
