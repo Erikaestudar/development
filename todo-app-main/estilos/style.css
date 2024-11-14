@@ -85,9 +85,10 @@ form p input {
     width: 17rem;
     font-size: 1rem;
     margin-bottom: 0.6rem;
-    padding: 0.6rem;
+    padding: 0.5rem;
     border: none;
     border-radius: 0.5rem;
+    outline: none;
 
     transition: width 0.2s, height .2s;
     transition-timing-function: ease;
@@ -106,7 +107,7 @@ div {
     transition-timing-function: ease;
 }
 
-div.check_list {
+div.check_box {
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: auto auto auto auto auto;
@@ -156,6 +157,7 @@ div button:hover {
     margin-right: 1.4rem;
 }
 
+/*
 footer { 
     margin-top: 48vh;
     font-size: 0.8rem; 
@@ -167,3 +169,4 @@ footer a {
     text-decoration: none;
     color: var(--Blue); 
 }
+*/

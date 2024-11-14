@@ -15,17 +15,17 @@
   <header>
     <nav>
       <h1>Todo</h1>
-      <abbr title="Change Theme"><img id="theme" src="images/icon-moon.svg" alt="Theme" onclick="change_theme()"></abbr>
+      <img id="theme" src="images/icon-moon.svg" alt="Theme" onclick="change_theme()" title="Change Theme">
     </nav>
 </header>
 <main>
   <section>
-    <form method="post" autocomplete="on">
+    <form id="taskForm" action="" method="post" autocomplete="on">
       <p>
-        <label for="itodo"></label>
-        <input name="todo" id="itodo" type="text" placeholder="Create a new todo..."></p>
+        <label for="ilist"></label>
+        <input name="list" id="ilist" type="text" placeholder="Create a new todo..."></p>
     </form>
-    <div class="check_list">
+    <div class="check_box">
           <ul class="list">
 
           </ul>
@@ -41,12 +41,14 @@
       <p>Drag and drop to reorder list</p>
   </section>
 </main>
+<!--
 <footer>
     <p>
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" rel="noopener" target="_blank">Frontend Mentor</a>.
       Coded by <a href="#" rel="noopener" target="_blank">Your Name Here</a>.
     </p>
 </footer>
-<script src="teste01.js"></script>
+-->
+  <script src="teste01.js"></script>
 </body>
 </html>

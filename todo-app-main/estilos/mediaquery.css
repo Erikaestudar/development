@@ -91,7 +91,7 @@
         width: 34rem;
     }
     
-    div.todo {
+    div.check_box {
         margin-top: 1.5rem;
         margin-bottom: 3.8rem;
         display: grid;
