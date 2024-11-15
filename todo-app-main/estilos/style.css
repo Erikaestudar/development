@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 :root {
+    --font: "Josefin Sans", sans-serif;
     --LightGray: hsl(0, 0%, 98%);
     --LightGrayishBlue: hsl(236, 33%, 92%);
     --LightGrayishBlue2: hsl(233, 11%, 84%);
@@ -28,6 +29,7 @@
 body {
     width: 100vw;
     height: 100vh;
+    font-family: var(--font);
 }
 
 main {
@@ -79,18 +81,15 @@ header img:hover {
 
 section {
     margin-top: -6.6rem;
-}
-
-section p {
     display: block;
     text-align: center;
 }
 
-form p input {
+form input {
     width: 17rem;
     font-size: 1rem;
     margin-bottom: 0.6rem;
-    padding: 0.5rem;
+    padding: 0.7rem;
     border: none;
     border-radius: 0.5rem;
     outline: none;
@@ -120,7 +119,7 @@ div.check_box {
 }
 
 ul.list {
-    width: 156%;
+    width: 186%;
     max-height: 59vh;
     list-style: none;
     padding: 0px;
@@ -144,6 +143,7 @@ ul li {
     list-style-position: inside;
     border-bottom: 1px solid var(--DarkGrayishBlue);
     padding: 0.3rem 0;
+    text-align: left;
     text-indent: 1.6rem;
     /*user-select: none;*/
     cursor: pointer;
@@ -159,11 +159,11 @@ ul #btn-check {
     width: 1.2rem;
     height: 1.2rem;
     cursor: pointer;
-    margin-right: 0.6rem;
+    /*margin-right: 0.6rem;  */
     border: 1px solid var(--DarkGrayishBlue);
 
     position: absolute;
-    right: 92%;
+    right: 91%;
     bottom: 17%;
 }
 
@@ -172,11 +172,11 @@ ul #btn-checked {
     width: 1.2rem;
     height: 1.2rem;
     cursor: pointer;
-    margin-right: 0.6rem;
+    /*margin-right: 0.6rem; */
     background-image: linear-gradient(to bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 
     position: absolute;
-    right: 92%;
+    right: 91%;
     bottom: 17%;
 }
 
@@ -187,7 +187,7 @@ ul #btn-del {
     background-color: transparent;
     cursor: pointer;
     position: absolute;
-    left: 94%;
+    left: 93%;
     bottom: 0%;
 }
 

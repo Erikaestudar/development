@@ -1,7 +1,3 @@
-
-document.body.style.fontFamily = `"Josefin Sans", sans-serif`
-document.body.style.backgroundColor = 'hsl(0, 0%, 98%)'
-
 // Seleção dos elementos
 const input = document.getElementById('ilist')
 const form = document.getElementById('taskForm')
