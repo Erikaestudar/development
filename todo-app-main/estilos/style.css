@@ -8,7 +8,15 @@
     --LightGrayishBlue2: hsl(233, 11%, 84%);
     --DarkGrayishBlue: hsl(236, 9%, 61%);
     --DarkGrayishBlue2: hsl(235, 19%, 35%);
-    --Blue:  hsl(228, 45%, 44%);
+
+    --BrightBlue: hsl(220, 98%, 61%);
+
+    --2VeryDarkBlue: hsl(235, 21%, 11%);
+    --2VeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+    --2LightGrayishBlue: hsl(234, 39%, 85%);
+    --2DarkGrayishBlue: hsl(234, 11%, 52%);
+    --2VeryDarkGrayishBlue: hsl(233, 14%, 35%);
+    --2VeryDarkGrayishBlue: hsl(237, 14%, 26%);
 }
 
 * {
@@ -216,7 +224,7 @@ button {
 }
 
 div button:hover {
-    color: var(--Blue);
+    color: var(--BrightBlue);
     font-weight: 600;
     box-sizing: border-box;
     text-shadow: 2px 2px 1px hsla(237, 9%, 61%, 0.250);
