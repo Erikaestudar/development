@@ -44,7 +44,6 @@ nav {
     width: 17rem;
     margin: auto;
     padding-top: 4.4rem;
-    border: 2px dashed rgb(153, 0, 255);
 
     transition: width 0.2s, height .2s;
     transition-timing-function: ease;
@@ -65,7 +64,6 @@ header h1 {
 
 header img {
     width: 1.6rem;
-    border: 2px dashed rgb(153, 0, 255);
 }
 
 header img:hover {
@@ -111,39 +109,71 @@ div.check_box {
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: auto auto auto auto auto;
-    border: 2px dashed rgb(0, 132, 255);
+
 }
 
 ul.list {
+    width: 156%;
+    max-height: 59vh;
     list-style: none;
     padding: 0px;
-    margin-left: -16px;
-    width: 180%;
-    border: 1px dashed blue;
+    margin-top: -0.6rem;
+    margin-left: -0.5rem;
+
+    background-color: aquamarine;
+    /*border: 1px dashed blue;*/
+    overflow: hidden;
+    overflow-y: scroll;
+    transition: width 0.2s, height .2s;
+    transition-timing-function: ease;
+}
+
+.list::-webkit-scrollbar {
+    display: none;
 }
 
 ul li {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     list-style-position: inside;
     border-bottom: 1px solid var(--DarkGrayishBlue);
-    padding: .4rem 0;
-    text-indent: 3rem;
+    padding: 0.3rem 0;
+    text-indent: 1.6rem;
     /*user-select: none;*/
     cursor: pointer;
     position: relative;
 }
 
-ul li::before {
-    content: '';
-    position: absolute;
-    width: 1.75rem;
-    height: 1.75rem;
-    border: 2px dashed red;
-    
+ul.list li:last-child {
+    margin-bottom: 0.1rem;
 }
 
-ul.list li:last-child {
-    margin-bottom: 0.5rem;
+ul #btn-check { 
+    border-radius: 50%;
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: pointer;
+    margin-right: 0.4rem;
+    border: 1px solid var(--DarkGrayishBlue);
+
+    position: absolute;
+    right: 93%;
+    bottom: 17%;
+}
+
+ul #btn-check:checked {
+    border-radius: 50%;
+    width: 1.3rem;
+    height: 1.3rem;
+    cursor: pointer;
+    background-image: linear-gradient(to bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+ul #btn-del {
+    width: 1.3rem;
+    height: 1.6rem;
+    position: absolute;
+    left: 94%;
+    bottom: 0%;
 }
 
 div.menu {
@@ -152,7 +182,7 @@ div.menu {
     justify-content: center;
     align-items: center;
     flex: auto;
-    margin-bottom: 2.9rem;
+    margin-bottom: 2rem;
     border: 2px dashed rgb(153, 0, 255);
 }
 

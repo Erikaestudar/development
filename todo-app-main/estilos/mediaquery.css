@@ -23,6 +23,9 @@
         width: 25rem;
     }
     
+    ul li {
+        text-indent: 1.8rem;
+    }
 }
 
 @media screen and (min-width:625px) and (max-width:1023px){
@@ -43,6 +46,22 @@
         width: 34rem;
         font-size: 1.2rem;
         padding: 1.2rem;
+    }
+
+    ul.list {
+        width: 138%;
+    }
+
+    ul li {
+        text-indent: 2rem;
+    }
+
+    ul #btn-check { 
+        right: 94%;
+    }
+
+    ul #btn-del {
+        left: 96%;
     }
 
     div {
@@ -90,7 +109,23 @@
     div {
         width: 34rem;
     }
-    
+
+    ul.list {
+        width: 138%;
+    }
+
+    ul li {
+        text-indent: 2.2rem;
+    }
+
+    ul #btn-check { 
+        right: 94%;
+    }
+
+    ul #btn-del {
+        left: 96%;
+    }
+
     div.check_box {
         margin-top: 1.5rem;
         margin-bottom: 3.8rem;
