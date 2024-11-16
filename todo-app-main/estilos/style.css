@@ -30,7 +30,14 @@ body {
     width: 100vw;
     height: 100vh;
     font-family: var(--font);
+}
+
+body.light-mode {
     background-color: var(--LightGray);
+}
+
+body.dark-mode {
+    background-color: var(--2VeryDarkBlue);
 }
 
 main {
@@ -38,17 +45,34 @@ main {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+}
+
+body.light-mode main {
     background-color: var(--LightGray);
     color: var(--DarkGrayishBlue2);
     border: 2px dashed red;
 }
 
+body.dark-mode main {
+    background-color: var(--2VeryDarkBlue);
+    color: var(--LightGrayishBlue2);
+    border: 2px dashed red;
+}
+
 header {
-    background: url("../images/bg-mobile-light.jpg") center top no-repeat;
-    background-size: cover;
     color: var(--LightGray);
     width: 100vw;
     height: 14rem;
+}
+
+body.light-mode header {
+    background: url("../images/bg-mobile-light.jpg") center top no-repeat;
+    background-size: cover;
+}
+
+body.dark-mode header {
+    background: url("../images/bg-mobile-dark.jpg") center top no-repeat;
+    background-size: cover;
 }
 
 nav {
@@ -71,6 +95,16 @@ header h1 {
 
     transition: margin .2s;
     transition-timing-function: ease;
+}
+
+body.light-mode header img {
+    background: url("../images/icon-moon.svg") center center no-repeat;
+    background-size: cover;
+}
+
+body.dark-mode header img {
+    background: url("../images/icon-sun.svg") center center no-repeat;
+    background-size: cover;
 }
 
 header img {
@@ -100,17 +134,34 @@ form input {
     transition-timing-function: ease;
 }
 
+body.light-mode form input {
+    background-color: hsl(0, 0%, 100%);
+    color: var(--DarkGrayishBlue2);
+}
+
+body.dark-mode form input {
+    background-color: var(--2VeryDarkDesaturatedBlue);
+    color: var(--LightGray);
+}
+
 div.check_box {
     font-size: 1.1rem;
     width: 17rem;
     padding: 0.8rem;
     margin: 0.8rem;
     border-radius: 0.5rem;
-    background-color: hsl(0, 0%, 100%);
-    box-shadow: 0px 10px 19px hsla(237, 9%, 61%, 0.555);
 
     transition: width 0.2s, height .2s;
     transition-timing-function: ease;
+}
+
+body.light-mode div.check_box {
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0px 10px 19px hsla(237, 9%, 61%, 0.555);
+}
+
+body.dark-mode div.check_box {
+    background-color: var(--2VeryDarkDesaturatedBlue);
 }
 
 ul.list {
@@ -120,6 +171,7 @@ ul.list {
     padding: 0px;
     margin-top: -0.6rem;
     margin-left: -0.5rem;
+    font-weight: 400;
 
     overflow: hidden;
     overflow-y: scroll;
@@ -143,8 +195,12 @@ ul li {
     position: relative;
 }
 
-ul li:hover {
+body.light-mode ul li:hover {
     box-shadow: inset 0px 0px 10px var(--LightGrayishBlue);
+}
+
+body.dark-mode ul li:hover {
+    box-shadow: inset 0px 0px 6px hsla(234, 11%, 52%, 0.320);
 }
 
 ul #btn-check { 
@@ -152,6 +208,7 @@ ul #btn-check {
     width: 1.2rem;
     height: 1.2rem;
     cursor: pointer;
+    background-color: hsl(0, 0%, 100%);
     border: 1px solid var(--DarkGrayishBlue);
 
     position: absolute;
@@ -172,6 +229,16 @@ ul #btn-checked {
     bottom: 17%;
 }
 
+body.light-mode ul #btn-check:hover {
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box, linear-gradient(to bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
+}
+
+body.dark-mode ul #btn-check:hover {
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box, linear-gradient(to bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
+}
+
 ul #btn-del {
     width: 1.3rem;
     height: 1.66rem;
@@ -182,8 +249,12 @@ ul #btn-del {
     bottom: 1%;
 }
 
-ul #btn-del:hover {
-    background-color: var(--LightGrayishBlue2);
+body.light-mode ul #btn-del:hover {
+    background-color: hsla(233, 11%, 84%, 0.350);
+}
+
+body.dark-mode ul #btn-del:hover {
+    background-color: hsla(233, 11%, 84%, 0.200);
 }
 
 div.menu{
@@ -204,9 +275,20 @@ div.menu p {
 }
 
 div.menu button {
+    cursor: pointer;
     position: absolute;
     top: 22%;
     right: 3%;
+}
+
+body.light-mode div.menu button {
+    background-color: hsl(0, 0%, 100%);
+    color: var(--DarkGrayishBlue2);
+}
+
+body.dark-mode div.menu button {
+    background-color: var(--2VeryDarkDesaturatedBlue);
+    color: var(--LightGrayishBlue);
 }
 
 div.menu-bottom {
@@ -222,25 +304,46 @@ div.menu-bottom {
     padding: 0.8rem;
     margin: 0.8rem;
     border-radius: 0.5rem;
-    background-color: hsl(0, 0%, 100%);
-    box-shadow: 0px 10px 19px hsla(237, 9%, 61%, 0.555);
 
     transition: width 0.2s, height .2s;
     transition-timing-function: ease;
 }
 
+body.light-mode div.menu-bottom {
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0px 10px 19px hsla(237, 9%, 61%, 0.555);
+}
+
+body.dark-mode div.menu-bottom {
+    background-color: var(--2VeryDarkDesaturatedBlue);
+}
+
 div button {
     font-size: 1rem;
-    font-weight: 500;
-    background-color: hsl(0, 0%, 100%);
-    color: var(--DarkGrayishBlue2);
+    font-weight: 400;
     border: none;
 }
 
-div button:hover {
+body.light-mode div.menu-bottom button {
+    cursor: pointer;
+    background-color: hsl(0, 0%, 100%);
+    color: var(--DarkGrayishBlue2);
+}
+
+body.dark-mode div.menu-bottom button {
+    cursor: pointer;
+    background-color: var(--2VeryDarkDesaturatedBlue);
+    color: var(--LightGrayishBlue);
+}
+
+body.light-mode div button:hover {
     color: var(--BrightBlue);
     font-weight: 500;
-    text-shadow: 2px 2px 1px hsla(237, 9%, 61%, 0.250);
+}
+
+body.dark-mode div button:hover {
+    color: var(--BrightBlue);
+    font-weight: 500;
 }
 
 div.menu-bottom #item-3, #item-4 {
