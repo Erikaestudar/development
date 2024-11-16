@@ -19,25 +19,46 @@
         font-size: 1.1rem;
     }
 
-    div {
+    div.check_box {
         width: 25rem;
     }
-    
+
     ul.list {
-        width: 156%;
+        width: 104%;
     }
 
     ul li {
-        text-indent: 1.8rem;
+        text-indent: 2rem;
     }
 
-    ul #btn-check, #btn-checked {
+    ul #btn-check {
+        right: 94%;
+    }
+
+    ul #btn-checked {
         right: 94%;
     }
 
     ul #btn-del {
         left: 95%;
     }
+
+    div.menu {
+        width: 25rem;
+    }
+    
+    div.menu p {
+        left: 2%;
+    }
+    
+    div.menu button {
+        right: 2%;
+    }
+    
+    div.menu-bottom {
+        width: 25rem;
+    }
+
 }
 
 @media screen and (min-width:625px) and (max-width:1023px){
@@ -60,23 +81,46 @@
         padding: 1rem;
     }
 
+    div.check_box {
+        width: 34rem;
+    }
+
     ul.list {
-        width: 143%;
+        width: 103%;
+        max-height: 60vh;
     }
 
     ul li {
+        padding: 0.5rem;
         text-indent: 2rem;
     }
 
-    ul #btn-check, #btn-checked { 
-        right: 95%;
+    ul #btn-check { 
+        right: 96%;
+    }
+
+    ul #btn-checked {
+        right: 96%;
     }
 
     ul #btn-del {
+        height: 2rem;
         left: 96%;
     }
 
-    div {
+    div.menu {
+        width: 34rem;
+    }
+    
+    div.menu p {
+        left: 2%;
+    }
+    
+    div.menu button {
+        right: 2%;
+    }
+    
+    div.menu-bottom {
         width: 34rem;
     }
     
@@ -118,57 +162,57 @@
         margin-top: -12.2rem;
     }
 
-    div {
+    div.check_box {
         width: 34rem;
     }
 
     ul.list {
-        width: 141%;
+        width: 103%;
+        max-height: 61vh;
     }
 
     ul li {
-        text-indent: 2rem;
-        font-size: 1.2rem;
+        padding: 0.5rem;
+        text-indent: 1.8rem;
+        font-size: 1.5rem;
+
     }
 
-    ul #btn-check, #btn-checked { 
-        right: 95%;
+    ul #btn-check { 
+        right: 96%;
+        bottom: 27%;
+    }
+
+    ul #btn-checked {
+        right: 96%;
+        bottom: 27%;
     }
 
     ul #btn-del {
-        left: 96%;
-    }
-
-    div.check_box {
-        margin-top: 1.5rem;
-        margin-bottom: 3.8rem;
-        display: grid;
-        grid-template-columns: auto auto auto auto auto;
+        width: 1.6rem;
+        height: 2.4rem;
+        left: 95%;
+        bottom: 2%;
     }
 
     div.menu {
+        width: 34rem;
+        height: 2.8rem;
+    }
+    
+    div.menu p {
+        left: 2%;
+    }
+    
+    div.menu button {
+        right: 2%;
+    }
+    
+    div.menu-bottom {
+        width: 34rem;
         display: none;
     }
-    
-    
-    #item-1 {
-        grid-column-start: 1;
-        border: 2px solid green;
-    }
-    #item-2 {
-        grid-column-start: 5;
-        border: 2px solid green;
-    }
-    #item-3 {
-        display: block;
-        grid-column-start: 2;
-        border: 2px solid green;
-    }
-    #item-4 {
-        border: 2px solid green;
-    }
-    #item-5 {
-        border: 2px solid green;
-    }
+   
 
+  
 }

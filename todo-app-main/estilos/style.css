@@ -30,13 +30,15 @@ body {
     width: 100vw;
     height: 100vh;
     font-family: var(--font);
+    background-color: var(--LightGray);
 }
 
 main {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    background-color: var(--LightGray);
     color: var(--DarkGrayishBlue2);
     border: 2px dashed red;
 }
@@ -98,7 +100,7 @@ form input {
     transition-timing-function: ease;
 }
 
-div {
+div.check_box {
     font-size: 1.1rem;
     width: 17rem;
     padding: 0.8rem;
@@ -111,23 +113,14 @@ div {
     transition-timing-function: ease;
 }
 
-div.check_box {
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: auto auto auto auto auto;
-
-}
-
 ul.list {
-    width: 186%;
-    max-height: 59vh;
+    width: 107%;
+    max-height: 55vh;
     list-style: none;
     padding: 0px;
     margin-top: -0.6rem;
     margin-left: -0.5rem;
 
-    background-color: aquamarine;
-    /*border: 1px dashed blue;*/
     overflow: hidden;
     overflow-y: scroll;
     transition: width 0.2s, height .2s;
@@ -144,14 +137,14 @@ ul li {
     border-bottom: 1px solid var(--DarkGrayishBlue);
     padding: 0.3rem 0;
     text-align: left;
-    text-indent: 1.6rem;
+    text-indent: 1.8rem;
     /*user-select: none;*/
-    cursor: pointer;
+    cursor: grab;
     position: relative;
 }
 
-ul.list li:last-child {
-    margin-bottom: 0.1rem;
+ul li:hover {
+    box-shadow: inset 0px 0px 10px var(--LightGrayishBlue);
 }
 
 ul #btn-check { 
@@ -159,11 +152,10 @@ ul #btn-check {
     width: 1.2rem;
     height: 1.2rem;
     cursor: pointer;
-    /*margin-right: 0.6rem;  */
     border: 1px solid var(--DarkGrayishBlue);
 
     position: absolute;
-    right: 91%;
+    right: 92%;
     bottom: 17%;
 }
 
@@ -176,48 +168,70 @@ ul #btn-checked {
     background-image: linear-gradient(to bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 
     position: absolute;
-    right: 91%;
+    right: 92%;
     bottom: 17%;
 }
 
-
 ul #btn-del {
     width: 1.3rem;
-    height: 1.63rem;
+    height: 1.66rem;
     background-color: transparent;
     cursor: pointer;
     position: absolute;
-    left: 93%;
-    bottom: 0%;
+    left: 92%;
+    bottom: 1%;
 }
 
-div.menu {
+ul #btn-del:hover {
+    background-color: var(--LightGrayishBlue2);
+}
+
+div.menu{
+    width: 17rem;
+    height: 2.4rem;
+    padding: 0.8rem;
+    margin: 0rem -0.8rem -0.8rem -0.8rem;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    background-color: transparent;
+    position: relative;
+}
+
+div.menu p {
+    position: absolute;
+    top: 25%;
+    left: 3%;
+}
+
+div.menu button {
+    position: absolute;
+    top: 22%;
+    right: 3%;
+}
+
+div.menu-bottom {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
     flex: auto;
     margin-bottom: 2rem;
-    border: 2px dashed rgb(153, 0, 255);
+    
+    font-size: 1.1rem;
+    width: 17rem;
+    padding: 0.8rem;
+    margin: 0.8rem;
+    border-radius: 0.5rem;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0px 10px 19px hsla(237, 9%, 61%, 0.555);
+
+    transition: width 0.2s, height .2s;
+    transition-timing-function: ease;
 }
 
-.list {
-    grid-column-start: 1;
-    grid-column-end: 5;
-}
-
-#item-1 {
-    grid-column-start: 1;
-    border: 2px solid green;
-}
-#item-2 {
-    grid-column-start: 5;
-    border: 2px solid green;
-}
-
-button {
+div button {
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 500;
     background-color: hsl(0, 0%, 100%);
     color: var(--DarkGrayishBlue2);
     border: none;
@@ -225,13 +239,12 @@ button {
 
 div button:hover {
     color: var(--BrightBlue);
-    font-weight: 600;
-    box-sizing: border-box;
+    font-weight: 500;
     text-shadow: 2px 2px 1px hsla(237, 9%, 61%, 0.250);
 }
 
-.menu button {
-    margin-right: 1.4rem;
+div.menu-bottom #item-3, #item-4 {
+    margin-right: 1.2rem;
 }
 
 /*
