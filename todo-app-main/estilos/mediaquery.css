@@ -1,8 +1,13 @@
 @charset "UTF-8";
 
 @media screen and (min-width:375px) and (max-width:625px){
-    header {
+    body.light-mode header {
         background: url("../images/bg-desktop-light.jpg") center top no-repeat;
+        background-size: cover;
+    }
+
+    body.dark-mode header {
+        background: url("../images/bg-desktop-dark.jpg") center top no-repeat;
         background-size: cover;
     }
 
@@ -32,11 +37,17 @@
     }
 
     ul #btn-check {
+        width: 1.2rem;
+        height: 1.2rem;
         right: 94%;
+        bottom: 18%;
     }
 
     ul #btn-checked {
+        width: 1.2rem;
+        height: 1.2rem;
         right: 94%;
+        bottom: 18%;
     }
 
     ul #btn-del {
@@ -62,11 +73,15 @@
 }
 
 @media screen and (min-width:625px) and (max-width:1023px){
-    header {
-        background: url("../images/bg-desktop-light.jpg") center top no-repeat;
+    body.light-mode header {
+        background: url("../images/bg-desktop-light.jpg") left top no-repeat;
         background-size: cover;
     }
 
+    body.dark-mode header {
+        background: url("../images/bg-desktop-dark.jpg") left top no-repeat;
+        background-size: cover;
+    }
     nav {
         width: 34rem;
     }
@@ -92,15 +107,21 @@
 
     ul li {
         padding: 0.5rem;
-        text-indent: 2rem;
+        text-indent: 1.6rem;
     }
 
     ul #btn-check { 
+        width: 1.2rem;
+        height: 1.2rem;
         right: 96%;
+        bottom: 26%;
     }
 
     ul #btn-checked {
+        width: 1.2rem;
+        height: 1.2rem;
         right: 96%;
+        bottom: 26%;
     }
 
     ul #btn-del {
@@ -126,14 +147,20 @@
     
 }
 
-@media screen and (min-width:1024px) {    
+@media screen and (min-width:1023px) {    
     main {
         display: grid;
         grid-template-rows: auto auto;
     }
 
-    header {
+    body.light-mode header {
         background: url("../images/bg-desktop-light.jpg") center top no-repeat;
+        background-size: cover;
+        height: 21rem;
+    }
+
+    body.dark-mode header {
+        background: url("../images/bg-desktop-dark.jpg") center top no-repeat;
         background-size: cover;
         height: 21rem;
     }
@@ -175,16 +202,19 @@
         padding: 0.5rem;
         text-indent: 1.8rem;
         font-size: 1.5rem;
-
     }
 
     ul #btn-check { 
-        right: 96%;
+        width: 1.4rem;
+        height: 1.4rem;
+        right: 95%;
         bottom: 27%;
     }
 
     ul #btn-checked {
-        right: 96%;
+        width: 1.4rem;
+        height: 1.4rem;
+        right: 95%;
         bottom: 27%;
     }
 
@@ -212,7 +242,5 @@
         width: 34rem;
         display: none;
     }
-   
 
-  
 }

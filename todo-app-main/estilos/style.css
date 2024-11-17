@@ -50,13 +50,11 @@ main {
 body.light-mode main {
     background-color: var(--LightGray);
     color: var(--DarkGrayishBlue2);
-    border: 2px dashed red;
 }
 
 body.dark-mode main {
     background-color: var(--2VeryDarkBlue);
     color: var(--LightGrayishBlue2);
-    border: 2px dashed red;
 }
 
 header {
@@ -66,12 +64,12 @@ header {
 }
 
 body.light-mode header {
-    background: url("../images/bg-mobile-light.jpg") center top no-repeat;
+    background: url("../images/bg-mobile-light.jpg") left top no-repeat;
     background-size: cover;
 }
 
 body.dark-mode header {
-    background: url("../images/bg-mobile-dark.jpg") center top no-repeat;
+    background: url("../images/bg-mobile-dark.jpg") left top no-repeat;
     background-size: cover;
 }
 
@@ -189,7 +187,7 @@ ul li {
     border-bottom: 1px solid var(--DarkGrayishBlue);
     padding: 0.3rem 0;
     text-align: left;
-    text-indent: 1.8rem;
+    text-indent: 1.5rem;
     /*user-select: none;*/
     cursor: grab;
     position: relative;
@@ -205,28 +203,28 @@ body.dark-mode ul li:hover {
 
 ul #btn-check { 
     border-radius: 50%;
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 1rem;
+    height: 1rem;
     cursor: pointer;
     background-color: hsl(0, 0%, 100%);
     border: 1px solid var(--DarkGrayishBlue);
 
     position: absolute;
-    right: 92%;
-    bottom: 17%;
+    right: 94%;
+    bottom: 22%;
 }
 
 ul #btn-checked {
     border-radius: 50%;
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 1rem;
+    height: 1rem;
     cursor: pointer;
     /*margin-right: 0.6rem; */
     background-image: linear-gradient(to bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 
     position: absolute;
-    right: 92%;
-    bottom: 17%;
+    right: 94%;
+    bottom: 22%;
 }
 
 body.light-mode ul #btn-check:hover {
@@ -266,6 +264,9 @@ div.menu{
     border-bottom-left-radius: 0.5rem;
     background-color: transparent;
     position: relative;
+
+    transition: width 0.2s, height .2s;
+    transition-timing-function: ease;
 }
 
 div.menu p {
