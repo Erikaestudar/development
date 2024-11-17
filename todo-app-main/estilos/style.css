@@ -95,6 +95,11 @@ header h1 {
     transition-timing-function: ease;
 }
 
+header img {
+    display: none;
+    width: 1.6rem;
+}
+
 body.light-mode header img#light-mode {
     background: url("../images/icon-moon.svg") center center no-repeat;
     background-size: cover;
@@ -105,11 +110,6 @@ body.dark-mode header img#dark-mode {
     background: url("../images/icon-sun.svg") center center no-repeat;
     background-size: cover;
     display: inline-block;
-}
-
-header img {
-    display: none;
-    width: 1.6rem;
 }
 
 header img:hover {
@@ -163,6 +163,7 @@ body.light-mode div.check_box {
 
 body.dark-mode div.check_box {
     background-color: var(--2VeryDarkDesaturatedBlue);
+    box-shadow: none;
 }
 
 ul.list {
@@ -320,6 +321,7 @@ body.light-mode div.menu-bottom {
 
 body.dark-mode div.menu-bottom {
     background-color: var(--2VeryDarkDesaturatedBlue);
+    box-shadow: none;
 }
 
 div button {
