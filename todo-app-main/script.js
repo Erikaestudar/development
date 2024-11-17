@@ -2,7 +2,14 @@
 const input = document.getElementById('ilist')
 const form = document.getElementById('taskForm')
 const list = document.querySelector('ul.list')
-const themeBtns = document.querySelectorAll('theme')
+const totalTask = document.getElementById('itotal')
+const themeBtns = document.querySelectorAll('.theme')
+
+// Função para atualizar o contador de tarefas
+function updateTaskCount() {
+    const total = list.querySelectorAll('li').length
+    totalTask.textContent = total
+}
 
 // Adiciona um novo item ao pressionar Enter
 form.addEventListener('submit', function(e) {
@@ -25,10 +32,15 @@ form.addEventListener('submit', function(e) {
 
         list.appendChild(li)
         input.value = '' // Limpa o campo de entrada
-
-        
-}
+        updateTaskCount() //Atualiza o contador de tarefas
+    }
 })
+
+    // Função para deletar o item
+    function del(btn) {
+        btn.parentElement.remove()
+        updateTaskCount()
+    }
 
     // function para salvar os dados e o layout
 
@@ -40,21 +52,38 @@ form.addEventListener('submit', function(e) {
         taskText.style.textDecoration = li.classList.contains('btn-checked') ? 'line-through' : 'none'
     }
 
-    // Função para deletar o item
-    function del(btn) {
-        btn.parentElement.remove()
-    }
-
     // Alterar tema
     themeBtns.forEach(btn => {
         btn.addEventListener('click', change_theme)
     })
 
+
+    function change_theme() {
+        const body = document.body
+        const isDark = body.classList.toggle('dark-mode')
+    
+        // Selecionar os ícones de sol e lua
+        const lightModeIcon = document.getElementById('light-mode')
+        const darkModeIcon = document.getElementById('dark-mode')
+    
+        if (isDark) {
+            // Mostrar ícone de sol, esconder o de lua
+            lightModeIcon.style.display = 'none'
+            darkModeIcon.style.display = 'inline'
+        } else {
+            // Mostrar ícone de lua, esconder o de sol
+            lightModeIcon.style.display = 'inline'
+            darkModeIcon.style.display = 'none'
+        }
+    }
+    
+    /*
     function change_theme() {
         const body = document.body
         const isDark = body.classList.toggle('dark-mode')
         
         themeBtns.forEach(btn => {
-            btn.src = isDark ? 'imagens/icon-sun.svg' : 'imagens/moon.svg'
+            btn.src = isDark ? './imagens/icon-sun.svg'  + document.img.style.display('inline') : './imagens/moon.svg'  + document.img.style.display('none')
         })
-}
+    }
+    */
