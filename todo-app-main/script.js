@@ -4,6 +4,7 @@ const form = document.getElementById('taskForm')
 const list = document.querySelector('ul.list')
 const totalTask = document.getElementById('itotal')
 const themeBtns = document.querySelectorAll('.theme')
+const allTask = document.getElementById('item-3')
 
 // Função para atualizar o contador de tarefas
 function updateTaskCount() {
@@ -77,6 +78,14 @@ form.addEventListener('submit', function(e) {
         }
     }
     
+    allTask.forEach(btn => {
+        btn.addEventListener('click', showAll)
+    })
+
+    function showAll() {
+        updateTaskCount()
+        del()
+    }
     /*
     function change_theme() {
         const body = document.body
