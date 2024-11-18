@@ -4,7 +4,9 @@ const form = document.getElementById('taskForm')
 const list = document.querySelector('ul.list')
 const totalTask = document.getElementById('itotal')
 const themeBtns = document.querySelectorAll('.theme')
-const allTask = document.getElementById('item-3')
+
+const allTaskBtn = document.getElementById('item-3')
+const checkBtns = document.querySelectorAll('.checkBtns')
 
 // Função para atualizar o contador de tarefas
 function updateTaskCount() {
@@ -19,7 +21,7 @@ form.addEventListener('submit', function(e) {
         const li = document.createElement('li')
         li.classList.add('list-item')
         li.innerHTML = `
-            <button id='btn-check' onclick='checked(this)'>
+            <button id='btn-check' onclick='change_check(this)'>
                 <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="#FFFFFF">
                     <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/>
                 </svg>
@@ -46,18 +48,37 @@ form.addEventListener('submit', function(e) {
     // function para salvar os dados e o layout
 
     // Função para marcar como concluído
+
+    function change_check(btn) {
+        const li = btn.parentElement
+        li.classList.toggle('btn-checked')
+        const taskText = li.querySelector(',task-text')
+
+        
+        
+
+        if (li.classList.contains('btn-checked')) {
+            taskText.style.textDecoration = 'line-through'
+            btn.style.backgroundColor ='blue'
+
+        } else {
+            taskText.style.textDecoration = 'none'
+            btn.style.backgroundColor ='red'
+        }
+            
+    }
+    /*
     function checked(btn) {
         const li = btn.parentElement
         li.classList.toggle('btn-checked')
         const taskText = li.querySelector('btn-check')
         taskText.style.textDecoration = li.classList.contains('btn-checked') ? 'line-through' : 'none'
     }
-
+    */
     // Alterar tema
     themeBtns.forEach(btn => {
         btn.addEventListener('click', change_theme)
     })
-
 
     function change_theme() {
         const body = document.body
@@ -78,14 +99,11 @@ form.addEventListener('submit', function(e) {
         }
     }
     
-    allTask.forEach(btn => {
-        btn.addEventListener('click', showAll)
+    allTaskBtn.addEventListener('click', () =>{
+        updateTaskCount()
     })
 
-    function showAll() {
-        updateTaskCount()
-        del()
-    }
+
     /*
     function change_theme() {
         const body = document.body
