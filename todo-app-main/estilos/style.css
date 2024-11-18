@@ -205,7 +205,7 @@ body.dark-mode ul li:hover {
     box-shadow: inset 0px 0px 6px hsla(234, 11%, 52%, 0.320);
 }
 
-ul #btn-check { 
+ul #btn-check, .checkBtns { 
     border-radius: 50%;
     width: 1rem;
     height: 1rem;
@@ -218,7 +218,7 @@ ul #btn-check {
     bottom: 22%;
 }
 
-ul #btn-checked {
+ul #btn-checked, .checkBtns {
     border-radius: 50%;
     width: 1rem;
     height: 1rem;
