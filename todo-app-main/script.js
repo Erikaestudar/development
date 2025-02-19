@@ -6,7 +6,7 @@ const totalTask = document.getElementById('itotal')
 const themeBtns = document.querySelectorAll('.theme')
 
 const allTaskBtn = document.getElementById('item-3')
-const checkBtns = document.querySelectorAll('.checkBtns')
+
 
 // Função para atualizar o contador de tarefas
 function updateTaskCount() {
@@ -50,9 +50,9 @@ form.addEventListener('submit', function(e) {
     // Função para marcar como concluído
 
     function change_check(btn) {
-        const li = btn.parentElement
+        let li = btn.parentElement
         li.classList.toggle('btn-checked')
-        const taskText = li.querySelector(',task-text')
+        let taskText = li.querySelector(',task-text')
 
         
         
@@ -81,12 +81,12 @@ form.addEventListener('submit', function(e) {
     })
 
     function change_theme() {
-        const body = document.body
-        const isDark = body.classList.toggle('dark-mode')
+        let body = document.body
+        let isDark = body.classList.toggle('dark-mode')
     
         // Selecionar os ícones de sol e lua
-        const lightModeIcon = document.getElementById('light-mode')
-        const darkModeIcon = document.getElementById('dark-mode')
+        let lightModeIcon = document.getElementById('light-mode')
+        let darkModeIcon = document.getElementById('dark-mode')
     
         if (isDark) {
             // Mostrar ícone de sol, esconder o de lua
@@ -106,8 +106,8 @@ form.addEventListener('submit', function(e) {
 
     /*
     function change_theme() {
-        const body = document.body
-        const isDark = body.classList.toggle('dark-mode')
+        let body = document.body
+        let isDark = body.classList.toggle('dark-mode')
         
         themeBtns.forEach(btn => {
             btn.src = isDark ? './imagens/icon-sun.svg'  + document.img.style.display('inline') : './imagens/moon.svg'  + document.img.style.display('none')
