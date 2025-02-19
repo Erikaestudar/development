@@ -352,7 +352,7 @@ body.dark-mode div button:hover {
     font-weight: 500;
 }
 
-div.menu-bottom #item-3, #item-4 {
+div.menu-bottom #iall, div.menu-bottom #iactive {
     margin-right: 1.2rem;
 }
 

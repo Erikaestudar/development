@@ -4,7 +4,11 @@ let form = document.getElementById('taskForm')
 let list = document.querySelector('ul.list')
 let totalTask = document.getElementById('itotal')
 let themeBtns = document.querySelectorAll('.theme')
-let allTaskBtn = document.getElementById('item-3')
+
+let allTaskBtn = document.getElementById('iall')
+let activeTaskBtn = document.getElementById('iactive')
+let completedTaskBtn = document.getElementById('icompleted')
+let clearCompletedTaskBtn = document.getElementById('iclearCompleted')
 
 // Função para atualizar o contador de tarefas
 function updateTaskCount() {
@@ -19,29 +23,31 @@ form.addEventListener('submit', function (e) {
         let li = document.createElement('li')
         li.classList.add('list-item')
 
-        // Criando elementos de forma correta
+        // Criando botão de check
         let checkBtn = document.createElement('button')
         checkBtn.classList.add('btn-check')
         checkBtn.innerHTML = `
-            <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="#FFFFFF">
+            <svg id="btn-check" xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="#FFFFFF">
                 <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/>
-            </svg>
-        `
+            </svg>`
+        
         checkBtn.addEventListener('click', function () {
             change_check(this)
         })
 
+        // Criando o texto da tarefa
         let taskText = document.createElement('span')
         taskText.classList.add('task-text')
         taskText.textContent = input.value
 
+        // Criando botão de deletar
         let delBtn = document.createElement('button')
         delBtn.classList.add('btn-del')
         delBtn.innerHTML = `
-            <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="#5f6368">
+            <svg id="btn-del" xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="#5f6368">
                 <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
-            </svg>
-        `
+            </svg>`
+
         delBtn.addEventListener('click', function () {
             del(this)
         })
@@ -66,15 +72,23 @@ function del(btn) {
 function change_check(btn) {
     let li = btn.parentElement
     li.classList.toggle('btn-checked')
-    let taskText = li.querySelector('.task-text') // Corrigido o seletor
+    let taskText = li.querySelector('.task-text')
 
     if (li.classList.contains('btn-checked')) {
         taskText.style.textDecoration = 'line-through'
-        btn.style.backgroundColor = 'blue'
+        
+        btn.innerHTML =  `<svg id="btn-checked" xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="#FFFFFF">
+        <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/>
+        </svg>`
+
     } else {
         taskText.style.textDecoration = 'none'
-        btn.style.backgroundColor = 'red'
+
+        btn.innerHTML =  `<svg id="btn-check" xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="#FFFFFF">
+        <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/>
+        </svg>`
     }
+
 }
 
 // Alterar tema
@@ -91,15 +105,47 @@ function change_theme() {
     let darkModeIcon = document.getElementById('dark-mode')
 
     if (isDark) {
-        // Mostrar ícone de lua, esconder o de sol
         lightModeIcon.style.display = 'none'
         darkModeIcon.style.display = 'inline'
     } else {
-        // Mostrar ícone de sol, esconder o de lua
         lightModeIcon.style.display = 'inline'
         darkModeIcon.style.display = 'none'
     }
 }
 
-// Atualizar contador ao clicar no botão "Todas as Tarefas"
-allTaskBtn.addEventListener('click', updateTaskCount)
+// Filtro: Todas as tarefas
+allTaskBtn.addEventListener('click', () => {
+    document.querySelectorAll('li').forEach(li => li.style.display = 'flex')
+    updateTaskCount()
+})
+
+activeTaskBtn.addEventListener('click', () => {
+    document.querySelectorAll('li').forEach(li => {
+        if (li.classList.contains('btn-checked')) {
+            li.style.display = 'none'
+        } else {
+            li.style.display = 'flex'
+        }
+    })
+    let active = document.querySelectorAll('li:not(.btn-checked)').length
+    totalTask.textContent = active
+})
+
+completedTaskBtn.addEventListener('click', () => {
+    document.querySelectorAll('li').forEach(li => {
+        if (!li.classList.contains('btn-checked')) {
+            li.style.display = 'none'
+        } else {
+            li.style.display = 'flex'
+        }
+    })
+    let completed = document.querySelectorAll('.btn-checked').length
+    totalTask.textContent = completed
+})
+
+clearCompletedTaskBtn.addEventListener('click', () => {
+    document.querySelectorAll('.btn-checked').forEach(li => {
+        li.remove() // Remove apenas as concluídas
+    })
+    updateTaskCount()
+})
