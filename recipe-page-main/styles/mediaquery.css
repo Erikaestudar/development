@@ -1,0 +1,58 @@
+@media screen and (min-width: 590px) {
+    main {
+        width: 45rem;
+        margin-top: 8rem;
+        margin-bottom: 8rem;
+        border-radius: 1.2rem;
+        padding: 1rem;
+    }
+
+    figure {
+        padding: 1.4rem 1.4rem 0rem 1.4rem;
+    }
+
+    img {
+        display: block;
+        margin: auto;
+        border-radius: 1.2rem;
+        overflow: hidden;
+    }
+
+    article {
+        margin: 0.3rem;
+    }
+
+    article h1 {
+        font-size: 2.6rem;
+    }
+
+    article p, aside li, article#ingredients li, article#instructions li, article#nutrition p  {
+        max-width: 100%;
+        font-size: 1rem;
+    }
+
+    aside {
+        margin: auto;
+        margin-top: 1.8rem;
+        width: 97%;
+        padding: 1rem;
+    }
+
+    aside h3 {
+        font-size: 1.4rem;
+    }
+
+    article h2 {
+        font-size: 1.8rem;
+    }
+
+    article#instructions li {
+        margin-left: 2.2rem;
+        margin-right: 0.6rem;
+    }
+    
+    table {
+        width: 98%;
+        font-size: 1rem;
+    }
+}

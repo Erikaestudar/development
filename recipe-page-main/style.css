@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Young+Serif&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --background: hsl(30, 54%, 90%);
+    --stone150: hsl(30, 18%, 87%);
+
+    --brown800: hsl(14, 45%, 36%);
+    --rose800: hsl(332, 51%, 32%);
+    --rose50: hsl(330, 100%, 98%);
+    --fontOutfit: "Outfit", sans-serif;
+    --fontYoungSerif: "Young Serif", serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background);
+}
+
+main {
+    background-color: hsl(0, 0%, 100%);
+    display: block;
+    margin: auto;
+    width: 100vw;
+    height: 100%; 
+    font-family: var(--fontOutfit);
+}
+
+img {
+    width: 100%;
+}
+
+article {
+    padding: 0.8rem;
+    margin: 0.8rem;
+}
+
+h1, h2, p {
+    padding: 0.5rem;
+}
+
+article h1 {
+    font-family: var(--fontYoungSerif);
+    font-size: 2.9rem;
+    font-weight: 500;
+}
+
+article p {
+    max-width: 27rem;
+    font-size: 1.3rem;
+}
+
+aside {
+    margin-top: 2.2rem;
+    background-color: var(--rose50);
+    padding: 1.4rem;
+    border-radius: 0.6rem;
+}
+
+aside h3 {
+    color: var(--rose800);
+    margin-bottom: 1.1rem;
+    font-size: 1.6rem;
+    padding-left: 0.5rem;
+}
+
+aside li::marker {
+    color: var(--rose800);
+}
+
+aside li {
+    margin-left: 2.4rem;
+    max-width: 17rem;
+    font-size: 1.2rem;
+}
+
+article h2 {
+    color: var(--brown800);
+    font-family: var(--fontYoungSerif);
+    font-weight: 400;
+    font-size: 2.3rem;
+    padding-bottom: 0.3rem;
+}
+
+article li {
+    padding: 0.4rem;
+}
+
+article#ingredients, article#instructions {
+    border-bottom: 1.4px solid var(--stone150);
+}
+
+article#ingredients li {
+    margin-left: 2.6rem;
+    font-size: 1.2rem;
+    max-width: 20rem;
+}
+
+article#instructions li {
+    margin-left: 2.5rem;
+    padding-left: 1rem;
+    margin-right: 2.7rem;
+    font-size: 1.2rem;
+    max-width: 29rem;
+}
+
+article#ingredients li::marker,article#instructions li::marker {
+    color: var(--brown800);
+    font-weight: 700;
+}
+
+article#ingredients li:last-child, article#instructions li:last-child {
+    margin-bottom: 1rem;
+}
+
+article#nutrition p {
+    max-width: 26rem;
+}
+
+table {
+    width: 90%;
+    margin: auto;
+    font-size: 1.2rem;
+    border-collapse: collapse;
+    margin-bottom: 0.9rem;
+}
+
+table th {
+    padding-left: 2.8rem;
+    font-weight: 400;
+}
+
+th, td {
+    border-bottom: 1px solid var(--stone150);
+    text-align: left;
+}
+
+table tr:last-child td, table tr:last-child th {
+    border: none;
+}
+
+table td{
+    padding: 1rem;
+    color: var(--brown800);
+    font-weight: 700;
+}
+
