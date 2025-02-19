@@ -1,16 +1,16 @@
 // Seleção dos elementos
-const input = document.getElementById('ilist')
-const form = document.getElementById('taskForm')
-const list = document.querySelector('ul.list')
-const totalTask = document.getElementById('itotal')
-const themeBtns = document.querySelectorAll('.theme')
+let input = document.getElementById('ilist')
+let form = document.getElementById('taskForm')
+let list = document.querySelector('ul.list')
+let totalTask = document.getElementById('itotal')
+let themeBtns = document.querySelectorAll('.theme')
 
-const allTaskBtn = document.getElementById('item-3')
+let allTaskBtn = document.getElementById('item-3')
 
 
 // Função para atualizar o contador de tarefas
 function updateTaskCount() {
-    const total = list.querySelectorAll('li').length
+    let total = list.querySelectorAll('li').length
     totalTask.textContent = total
 }
 
@@ -18,7 +18,7 @@ function updateTaskCount() {
 form.addEventListener('submit', function(e) {
     e.preventDefault()
     if (input.value.trim() !== '') {
-        const li = document.createElement('li')
+        let li = document.createElement('li')
         li.classList.add('list-item')
         li.innerHTML = `
             <button id='btn-check' onclick='change_check(this)'>
@@ -69,9 +69,9 @@ form.addEventListener('submit', function(e) {
     }
     /*
     function checked(btn) {
-        const li = btn.parentElement
+        let li = btn.parentElement
         li.classList.toggle('btn-checked')
-        const taskText = li.querySelector('btn-check')
+        let taskText = li.querySelector('btn-check')
         taskText.style.textDecoration = li.classList.contains('btn-checked') ? 'line-through' : 'none'
     }
     */
