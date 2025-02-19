@@ -148,11 +148,6 @@
 }
 
 @media screen and (min-width:1023px) {    
-    main {
-        display: grid;
-        grid-template-rows: auto auto;
-    }
-
     body.light-mode header {
         background: url("../images/bg-desktop-light.jpg") center top no-repeat;
         background-size: cover;
@@ -243,4 +238,30 @@
         display: none;
     }
 
+    div.menu {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+    }
+
+    div.menu button#iall, div.menu button#iactive, div.menu button#icompleted {
+        display: block;
+        top: -16%;
+    }
+
+    div.menu button#iall, div.menu button#iactive {
+        margin-right: 1rem;
+    }
+
+    #icompleted {
+        position: relative; /* Evita sobrepor outros elementos */    
+    }
+
+    #iactive {
+        position: relative; /* Evita sobrepor outros elementos */
+    }
+
+    #iall {
+        position: relative; /* Evita sobrepor outros elementos */
+    }   
 }

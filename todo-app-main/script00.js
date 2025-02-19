@@ -149,3 +149,28 @@ clearCompletedTaskBtn.addEventListener('click', () => {
     })
     updateTaskCount()
 })
+
+
+let menu = document.querySelector('.menu')
+let menuBottom = document.querySelector('.menu-bottom')
+let filterButtons = document.querySelectorAll('.menu-bottom button')
+
+function adjustMenu() {
+    if (!menuBottom) return // Se menuBottom for null, para a função
+
+    if (window.innerWidth >= 1023) {
+        filterButtons.forEach(btn => {
+            menu.appendChild(btn)
+        })
+        menuBottom.style.display = 'none' // Só altera se menuBottom existir
+    } else {
+        filterButtons.forEach(btn => {
+            menuBottom.appendChild(btn)
+        })
+        menuBottom.style.display = 'flex'
+    }
+}
+
+adjustMenu()
+
+window.onresize = adjustMenu
