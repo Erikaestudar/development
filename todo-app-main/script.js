@@ -109,6 +109,14 @@ function showValues() {
         li.appendChild(taskText)
         li.appendChild(delBtn)
         list.appendChild(li)
+
+        // Tornar cada tarefa "arrastável"
+        li.setAttribute('draggable', true)
+
+        // Eventos de arrastar
+        li.addEventListener('dragstart', dragStart)
+        li.addEventListener('dragover', dragOver)
+        li.addEventListener('drop', drop)
     })
     updateTaskCount() // Atualiza o contador de tarefas
     input.focus()
@@ -239,6 +247,68 @@ function adjustMenu() {
         menuBottom.style.display = 'flex'
     }
 }
+
+
+let draggedItem = null
+
+// Quando começa a arrastar
+function dragStart(event) {
+  draggedItem = event.target // Define o item arrastado
+  event.dataTransfer.effectAllowed = 'move'
+  event.dataTransfer.setData('text/html', draggedItem.outerHTML)
+
+  // Adiciona uma classe visual
+  draggedItem.classList.add('dragging')
+}
+
+// Quando passa por cima de outro item
+function dragOver(event) {
+  event.preventDefault() // Permite o drop
+  event.dataTransfer.dropEffect = 'move'
+}
+
+// Quando solta o item em um novo local
+function drop(event) {
+  event.preventDefault()
+
+  if (event.target.closest('li') && event.target.closest('li') !== draggedItem) {
+    // Insere o item antes ou depois dependendo da posição
+    const dropTarget = event.target.closest('li')
+    const bounding = dropTarget.getBoundingClientRect()
+    const offset = event.clientY - bounding.top
+
+    if (offset > bounding.height / 2) {
+      // Solta depois
+      dropTarget.after(draggedItem)
+    } else {
+      // Solta antes
+      dropTarget.before(draggedItem)
+    }
+
+    // Atualiza a lista no localStorage
+    updateOrderInStorage()
+  }
+
+  draggedItem.classList.remove('dragging')
+  draggedItem = null
+}
+
+function updateOrderInStorage() {
+    let updatedTasks = []
+    list.querySelectorAll('li').forEach((li) => {
+      const taskName = li.querySelector('.task-text').textContent
+      const isCompleted = li.classList.contains('btn-checked')
+  
+      updatedTasks.push({
+        name: taskName,
+        completed: isCompleted,
+      })
+    })
+  
+    localStorage.setItem(localStorageKey, JSON.stringify(updatedTasks))
+    updateTaskCount()
+  }
+  
 
 adjustMenu()
 showValues()
