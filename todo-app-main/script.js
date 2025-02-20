@@ -11,6 +11,7 @@ let completedTaskBtn = document.getElementById('icompleted')
 let clearCompletedTaskBtn = document.getElementById('iclearCompleted')
 
 const localStorageKey = 'to-do-list'
+input.focus()
 
 // Função para atualizar o contador de tarefas
 function updateTaskCount() {
@@ -21,7 +22,20 @@ function updateTaskCount() {
 // Adiciona um novo item ao pressionar Enter
 form.addEventListener('submit', function (e) {
     e.preventDefault()
-    if (input.value.trim() !== '') {
+    
+    input.style.border = ""
+
+    if (!input.value.trim()) {
+        input.style.border = '1px solid red'
+        alert('[ERRO] Digite algo para inserir em sua lista.')
+
+    } else if (validateIfExistsNewTask()){
+
+        alert('[ERRO] Já existe uma task com essa descrição.')
+        input.value = ""
+        input.focus()
+
+    } else {
 
         //increment to localStorage
         let values = JSON.parse(localStorage.getItem(localStorageKey) || "[]")
@@ -31,6 +45,8 @@ form.addEventListener('submit', function (e) {
         })
         localStorage.setItem(localStorageKey, JSON.stringify(values))
         input.value = ''
+
+        input.focus()
         showValues()
     }
 })
@@ -95,6 +111,14 @@ function showValues() {
         list.appendChild(li)
     })
     updateTaskCount() // Atualiza o contador de tarefas
+    input.focus()
+}
+
+function validateIfExistsNewTask() {
+    let values = JSON.parse(localStorage.getItem(localStorageKey) || "[]")
+    let inputValue = input.value
+    let exists = values.find((x) => x.name == inputValue)
+    return !exists ? false : true
 }
 
 // Função para deletar o item
@@ -140,6 +164,8 @@ clearCompletedTaskBtn.addEventListener('click', () => {
 allTaskBtn.addEventListener('click', () => {
     document.querySelectorAll('li').forEach((li) => (li.style.display = 'flex'))
     updateTaskCount()
+
+    input.focus()
 })
 
 activeTaskBtn.addEventListener('click', () => {
@@ -152,6 +178,8 @@ activeTaskBtn.addEventListener('click', () => {
     })
     let active = document.querySelectorAll('li:not(.btn-checked)').length
     totalTask.textContent = active
+
+    input.focus()
 })
 
 completedTaskBtn.addEventListener('click', () => {
@@ -164,6 +192,8 @@ completedTaskBtn.addEventListener('click', () => {
     })
     let completed = document.querySelectorAll('.btn-checked').length
     totalTask.textContent = completed
+
+    input.focus()
 })
 
 // Alterar tema
@@ -186,6 +216,7 @@ function change_theme() {
         lightModeIcon.style.display = 'inline'
         darkModeIcon.style.display = 'none'
     }
+    input.focus()
 }
 
 // Ajuste de layout responsivo
