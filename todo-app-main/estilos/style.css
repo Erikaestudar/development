@@ -74,7 +74,7 @@ body.dark-mode header {
 }
 
 nav {
-    width: 17rem;
+    width: 15rem;
     margin: auto;
     padding-top: 4.4rem;
 
@@ -123,7 +123,7 @@ section {
 }
 
 form input {
-    width: 17rem;
+    width: 15rem;
     font-size: 1rem;
     margin-bottom: 0.5rem;
     padding: 0.7rem;
@@ -147,7 +147,7 @@ body.dark-mode form input {
 
 div.check_box {
     font-size: 1.1rem;
-    width: 17rem;
+    width: 15rem;
     padding: 0.8rem;
     margin: 0.8rem;
     border-radius: 0.5rem;
@@ -260,7 +260,7 @@ body.dark-mode ul #btn-del:hover {
 }
 
 div.menu{
-    width: 17rem;
+    width: 15rem;
     height: 2.4rem;
     padding: 0.8rem;
     margin: 0rem -0.8rem -0.8rem -0.8rem;
@@ -305,7 +305,7 @@ div.menu-bottom {
     margin-bottom: 2rem;
     
     font-size: 1.1rem;
-    width: 17rem;
+    width: 15rem;
     padding: 0.8rem;
     margin: 0.8rem;
     border-radius: 0.5rem;
