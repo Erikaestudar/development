@@ -65,7 +65,7 @@ I intend to continue learning more and more.
 
 ## Author
 
-- Website - [Erikaestudar](https://erikaestudar.github.io/development/social-links-profile-main/index.html)
+- Website - [Erikaestudar](https://github.com/Erikaestudar/development/tree/main/todo-app-main)
 - Frontend Mentor - [@Erikaestudar](https://www.frontendmentor.io/profile/Erikaestudar)
 
 ## Acknowledgments
