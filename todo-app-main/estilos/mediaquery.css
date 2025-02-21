@@ -12,20 +12,20 @@
     }
 
     nav {
-        width: 25rem;
+        width: 22rem;
     }
 
     header h1 {
-        margin-right: 12.4rem;
+        margin-right: 9.4rem;
     }
     
     form input {
-        width: 25rem;
+        width: 22rem;
         font-size: 1.1rem;
     }
 
     div.check_box {
-        width: 25rem;
+        width: 22rem;
     }
 
     ul.list {
@@ -55,7 +55,7 @@
     }
 
     div.menu {
-        width: 25rem;
+        width: 22rem;
     }
     
     div.menu p {
@@ -67,7 +67,7 @@
     }
     
     div.menu-bottom {
-        width: 25rem;
+        width: 22rem;
     }
 
 }
@@ -87,7 +87,7 @@
     }
 
     header h1 {
-        margin-right: 21.4rem;
+        margin-right: 21.2rem;
     }
     
     form input {
@@ -167,7 +167,7 @@
 
     header h1 {
         font-size: 2.8rem;
-        margin-right: 19.4rem;
+        margin-right: 19.1rem;
     }
 
     header img {
