@@ -1,8 +1,14 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Young+Serif&display=swap');
+@font-face {
+    font-family: "Outfit", sans-serif;
+    src: url(../assets/fonts/outfit/static/Outfit-Regular.ttf) format("truetype"), url(../assets/fonts/outfit/static/Outfit-Medium.ttf) format("truetype"), url(../assets/fonts/outfit/static/Outfit-Bold.ttf) format("truetype"), url(../assets/fonts/outfit/static/Outfit-SemiBold.ttf) format("truetype"), url(../assets/fonts/outfit/static/Outfit-ExtraBold.ttf) format("truetype");
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@font-face {
+    font-family: "Young Serif", serif;
+    src: url(../assets/fonts/young-serif/YoungSerif-Regular.ttf) format("truetype")
+}
 
 :root {
     --background: hsl(30, 54%, 90%);
@@ -49,8 +55,8 @@ h1, h2, p {
 
 article h1 {
     font-family: var(--fontYoungSerif);
-    font-size: 2.9rem;
-    font-weight: 500;
+    font-size: 2.7rem;
+    font-weight: bold;
 }
 
 article p {
@@ -85,7 +91,7 @@ aside li {
 article h2 {
     color: var(--brown800);
     font-family: var(--fontYoungSerif);
-    font-weight: 400;
+    font-weight: bolder;
     font-size: 2.3rem;
     padding-bottom: 0.3rem;
 }
@@ -114,7 +120,7 @@ article#instructions li {
 
 article#ingredients li::marker,article#instructions li::marker {
     color: var(--brown800);
-    font-weight: 700;
+    font-weight: bolder;
 }
 
 article#ingredients li:last-child, article#instructions li:last-child {
@@ -135,7 +141,7 @@ table {
 
 table th {
     padding-left: 2.8rem;
-    font-weight: 400;
+    font-weight: normal;
 }
 
 th, td {
@@ -147,9 +153,9 @@ table tr:last-child td, table tr:last-child th {
     border: none;
 }
 
-table td{
+table td {
     padding: 1rem;
     color: var(--brown800);
-    font-weight: 700;
+    font-weight: bolder;
 }
 
