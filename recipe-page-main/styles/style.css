@@ -71,7 +71,7 @@ aside {
     border-radius: 0.6rem;
 }
 
-aside h3 {
+aside p#headline {
     color: var(--rose800);
     margin-bottom: 1.1rem;
     font-size: 1.6rem;
