@@ -75,6 +75,7 @@ aside p#headline {
     color: var(--rose800);
     margin-bottom: 1.1rem;
     font-size: 1.6rem;
+    font-weight: bold;
     padding-left: 0.5rem;
 }
 
