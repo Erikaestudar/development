@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit; /* reseta a fonte padrão */
+
+    /* motor que funciona no Safari e no Chrome, arruma uma fonte para ficar mais suave*/
+    -webkit-font-smoothing: antialiased;
+    /* motor que funciona no Mozilla, a fonte fica mais suave, um pouquinho mais fina*/
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    --bg-color: hsl(30, 38%, 92%);
+
+    --text-color-primary: hsl(212, 21%, 14%);
+    --text-color-secondary: hsl(228, 12%, 48%);
+    --text-color-tertiary: hsl(0, 0%, 100%);
+
+    --brand-color-500: hsl(158, 36%, 37%);
+    --brand-color-700: hsl(158, 42%, 18%);
+
+    --font-primary: "Fraunces", serif;
+    --font-secondary: "Montserrat", sans-serif;
+    --fw-base: 500;
+    --fw-semi-bold: 700;
+
+    --fs-sm: 0.875rem;
+    --fs-lg: 1.25rem;
+    --fs-2xl: 2.5rem; 
+}
+
+body {
+    font-family: var(--font-secondary);
+}
+
+h1 {
+    font: var(--fw-semi-bold) var(--fs-2xl)/150% var(--font-primary);
+}
+
+.subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
