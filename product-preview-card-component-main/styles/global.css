@@ -45,7 +45,9 @@ img {
 body {
     font-family: var(--font-secondary);
     background-color: var(--bg-color);
-    display: grid;
+}
+
+section {
     place-items: center;  /* Centraliza tanto na horizontal quanto na vertical */
     min-height: 100vh;
 }
