@@ -16,7 +16,7 @@
 }
 
 :root {
-    --bg-color: hsl(30, 38%, 92%);
+    --bg-color:hsl(26, 40%, 92%);
 
     --text-color-primary: hsl(212, 21%, 14%);
     --text-color-secondary: hsl(228, 12%, 48%);
@@ -32,18 +32,122 @@
 
     --fs-sm: 0.875rem;
     --fs-lg: 1.25rem;
-    --fs-2xl: 2.5rem; 
+    --fs-2xl: 2rem;
+    
+    --px-base: 1.25rem;
+    --py-base: 1.25rem;
+}
+
+img {
+    max-width: 100%;
 }
 
 body {
     font-family: var(--font-secondary);
+    background-color: var(--bg-color);
+    display: grid;
+    place-items: center;  /* Centraliza tanto na horizontal quanto na vertical */
+    min-height: 100vh;
+}
+
+main {
+    padding-inline: var(--px-base);
+    padding-block: var(--py-base);  
+}
+
+header > img.mobile-only {
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
 }
 
 h1 {
-    font: var(--fw-semi-bold) var(--fs-2xl)/150% var(--font-primary);
+    font: var(--fw-semi-bold) var(--fs-2xl)/100% var(--font-primary);
+}
+
+main p {
+    line-height: 1.5rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.container {
+    --max-width: 375px;
+    width: min(var(--max-width), 100% - var(--px-base) * 2);
+    background-color: var(--text-color-tertiary);
+    margin: 2rem auto 2rem; 
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.301);
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.desktop-only {
+    display: none;
+}
+
+.even-columns {
+    display: grid;
+    gap: 1rem;
 }
 
 .subtitle {
     text-transform: uppercase;
     letter-spacing: 0.5rem;
+}
+
+div.price-container {
+    align-items: center;
+    gap: 1rem;
+}
+
+.price-sale {
+    font: var(--fw-semi-bold) var(--fs-2xl)/140% var(--font-primary);
+    color: var(--brand-color-500);
+}
+
+.price-full {
+    text-decoration: line-through;
+}
+
+.button-container {
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    background-color: var(--brand-color-500);
+    color: var(--text-color-tertiary);
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
+.button-container:hover {
+    background-color: var(--brand-color-700);
+}
+
+@media (width >= 80em) {
+    :root {
+        --fs-2xl: 2.3rem;
+    }
+
+    .subtitle {
+        margin-top: .5rem;
+    }
+
+    .mobile-only {
+        display: none;
+    }
+
+    .container {
+        --max-width: 37.5rem;
+        grid-template-columns: repeat(2 ,1fr);
+    }
+
+    .desktop-only {
+        display: initial;
+    }
 }
