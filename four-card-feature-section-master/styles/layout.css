@@ -1,0 +1,151 @@
+header {
+    margin: 2rem auto;
+    text-align: center;
+}
+
+header span {
+    display: block;
+    margin-inline: auto;
+    margin-top: 1rem;
+    max-width: 32rem;
+}
+
+main {
+    margin-inline: auto;
+}
+
+@media (width <= 48em) {
+    header span {
+        max-width: 23rem;
+    }
+
+    footer.desktop-only {
+        display: none;
+    }
+}
+
+@media (width >= 48em) {
+    footer.flex {
+        text-align: center;
+        align-items: end;
+        display: block;
+        gap: 0.5rem;
+    }
+}
+
+section {
+    background-color: var(--white);
+    width: 21rem;
+    height: 17rem;
+    border-radius: 0.5rem;
+    filter: drop-shadow(0px 0px 5px hsla(210, 6%, 44%, 0.500));
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+
+    z-index: 1; /* Todo o conteúdo fica acima */
+    overflow: hidden;
+    position: relative;
+}
+
+section h3 {
+    margin-top: 1rem;
+}
+
+section p {
+    width: 17rem;
+    margin-top: 0.5rem;
+}
+
+.card-01 div.images,
+.card-02 div.images,
+.card-03 div.images,
+.card-04 div.images {
+    margin-top: 2.5rem;
+    position: absolute;
+    right: 1.5rem;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    z-index: 0; /* Fica no fundo */
+}
+
+.card-01::before {
+    background-color: var(--border-cyan);
+}
+
+.card-02::before {
+    background-color: var(--border-red);
+}
+
+.card-03::before {
+    background-color: var(--border-orange);
+}
+
+.card-04::before {
+    background-color: var(--border-blue);
+}
+
+section > * {
+    position: relative;
+    z-index: 1;
+}
+
+@media (width >= 80em) {
+    section {
+        width: 23rem;
+        height: 16rem;
+    }
+
+    header {
+        grid-area: header;
+        text-align: center;
+    }
+
+    main {
+        display: contents;
+    }
+
+    .card-01 {
+        grid-area: card-01;
+    }
+
+    .card-02 {
+        grid-area: card-02;
+    }
+
+    .card-03 {
+        grid-area: card-03;
+    }
+
+    .card-04 {
+        grid-area: card-04;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas: 
+            ". header header header ."
+            ". . card-02 . ."
+            ". card-01 card-02 card-04 ."
+            ". card-01 card-03 card-04 ."
+            ". . card-03 . ."
+            ". footer footer footer .";
+        justify-items: center;
+        align-items: center;
+        column-gap: 2rem;
+        row-gap: 1rem;
+        }
+}
