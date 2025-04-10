@@ -47,7 +47,7 @@ section {
     position: relative;
 }
 
-section h3 {
+section h2.card-title {
     margin-top: 1rem;
 }
 
