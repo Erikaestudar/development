@@ -35,8 +35,8 @@ main {
 
 section {
     background-color: var(--white);
-    width: 21rem;
-    height: 17rem;
+    width: 21.5rem;
+    height: 16rem;
     border-radius: 0.5rem;
     filter: drop-shadow(0px 0px 5px hsla(210, 6%, 44%, 0.500));
     margin-bottom: 2rem;
@@ -100,12 +100,12 @@ section > * {
 
 @media (width >= 80em) {
     .container {
-        margin-top: 2.5rem;
+        margin-top: 3rem;
     }
 
     section {
-        width: 22rem;
-        height: 16rem;
+        width: 21.5rem;
+        height: 15.5rem;
     }
 
     header {
@@ -150,6 +150,6 @@ section > * {
         justify-items: center;
         align-items: center;
         column-gap: 2rem;
-        row-gap: 1rem;
+        row-gap: 0rem;
         }
 }
