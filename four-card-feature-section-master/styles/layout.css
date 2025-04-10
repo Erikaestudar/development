@@ -141,11 +141,11 @@ section > * {
 
     .card-02 {
         grid-area: card-02;
+        margin-bottom: -1rem;
     }
 
     .card-03 {
         grid-area: card-03;
-        transform: translateY(-0.5rem);
     }
 
     .card-04 {
@@ -169,5 +169,6 @@ section > * {
         justify-items: center;
         align-items: center;
         column-gap: 2rem;
+        row-gap: 1.5rem;
         }
 }
