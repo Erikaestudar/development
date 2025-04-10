@@ -99,8 +99,12 @@ section > * {
 }
 
 @media (width >= 80em) {
+    .container {
+        margin-top: 2.5rem;
+    }
+
     section {
-        width: 23rem;
+        width: 22rem;
         height: 16rem;
     }
 
@@ -137,12 +141,12 @@ section > * {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-template-areas: 
-            ". header header header ."
-            ". . card-02 . ."
+            ".  header header header  ."
+            ". .       card-02       . ."
             ". card-01 card-02 card-04 ."
             ". card-01 card-03 card-04 ."
-            ". . card-03 . ."
-            ". footer footer footer .";
+            ". .       card-03       . ."
+            ".  footer footer footer  .";
         justify-items: center;
         align-items: center;
         column-gap: 2rem;
