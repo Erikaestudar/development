@@ -24,7 +24,7 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ### Links
 
-- Solution URL: [GitHub dolution pages](https://github.com/Erikaestudar/development/tree/main/recipe-page-main)
+- Solution URL: [GitHub solution pages](https://github.com/Erikaestudar/development/tree/main/recipe-page-main)
 - Live Site URL: [Recipe Page](https://erikaestudar.github.io/development/recipe-page-main/index.html)
 
 ## My process
