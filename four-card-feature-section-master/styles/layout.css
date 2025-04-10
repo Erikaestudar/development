@@ -26,6 +26,8 @@ main {
 
 @media (width >= 48em) {
     footer.flex {
+        margin-top: 2rem;
+        padding-block: 2rem;
         text-align: center;
         align-items: end;
         display: block;
@@ -127,6 +129,7 @@ section > * {
 
     .card-03 {
         grid-area: card-03;
+        transform: translateY(-0.5rem);
     }
 
     .card-04 {
@@ -150,6 +153,5 @@ section > * {
         justify-items: center;
         align-items: center;
         column-gap: 2rem;
-        row-gap: 0rem;
         }
 }
