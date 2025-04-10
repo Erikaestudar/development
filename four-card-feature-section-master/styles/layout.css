@@ -118,7 +118,7 @@ section > * {
 
 @media (width >= 80em) {
     .container {
-        margin-top: 3.5rem;
+        margin-top: 3rem;
     }
 
     section {
