@@ -24,8 +24,8 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
 
 ### Links
 
-- Solution URL: [GitHub dolution pages](https://github.com/Erikaestudar/development/tree/main/four-card-feature-section-master)
-- Live Site URL: [Add live site URL here](https://erikaestudar.github.io/development/four-card-feature-section-master/index.html)
+- Solution URL: [GitHub solution pages](https://github.com/Erikaestudar/development/tree/main/four-card-feature-section-master)
+- Live Site URL: [Four Card Feature Section](https://erikaestudar.github.io/development/four-card-feature-section-master/index.html)
 
 ## My process
 
