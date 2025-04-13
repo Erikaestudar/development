@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Figtree";
+    src: url("../assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype"), url("../assets/fonts/Figtree-Italic-VariableFont_wght.ttf") format("truetype"), url("../assets/fonts/static/Figtree-Bold.ttf") format("truetype"), url("../assets/fonts/static/Figtree-SemiBold.ttf") format("truetype"), url("../assets/fonts/static/Figtree-ExtraBold.ttf") format("truetype"), ;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    --body-bg: hsl(47, 88%, 63%);
+    --main-bg:hsl(0, 0%, 100%);
+    --link-color:hsl(228, 45%, 44%);
+    --ff: "Figtree", sans-serif;
+
+    --h1: 800 1.3rem/145% var(--ff);
+    --text-sm: 500 0.9rem/140% var(--ff);
+}
+
+.flex {
+    display: flex;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    background-color: var(--body-bg);
+    font: var(--text-sm);
+}
+
+.container {
+    width: 100vw;
+    min-height: 100vh;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: var(--main-bg);
+    max-width: 21rem;
+    height: 30.5rem;
+    padding: 1.2rem;
+    margin-block: 0.625rem;
+    border-radius: 1.25rem;
+    border: 1px solid black;
+    box-shadow: 7px 7px 0px black;
+    overflow: hidden;
+
+    transition: width .3s, height .3s;
+    transition-timing-function: ease;
+}
+
+section > img {
+    border-radius: 0.625rem;
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.300);
+}
+
+span.destaque {
+    display: inline-block;
+    background-color: var(--body-bg);
+    padding: 0.36rem 1.25rem;
+    margin-block: 1.3rem 0.6rem;
+    border-radius: 0.3125rem;
+    font-weight: 700;
+}
+
+.text h1 {
+    font: var(--h1);
+    padding-block: 0.4rem;
+}
+
+.text h1:hover {
+    color: var(--body-bg);
+}
+
+.text p {
+    padding-block: 0.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.perfil a:hover,
+footer a:hover {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
+.perfil {
+    margin-top: 0.5rem;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+div.photo {
+    width: 2rem;
+}
+
+footer {
+    font-size: 0.8em;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (width >= 48em) {
+    :root {
+        --h1: 800 1.5rem/145% var(--ff);
+        --text-sm: 500 1rem/140% var(--ff);
+    }
+
+    main {
+        max-width: 23.75rem;
+        height: 33.3rem;
+        padding: 1.5rem;
+    }
+}
