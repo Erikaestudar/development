@@ -1,8 +1,0 @@
-@charset "UTF-8";
-
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-    body {
-        background-color: hsl(216, 15%, 48%)
-    }
-}
-
