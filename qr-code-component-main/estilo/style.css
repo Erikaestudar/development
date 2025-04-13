@@ -26,7 +26,7 @@ body {
 main {
     background-color: hsl(0, 0%, 100%);
     width: 340px; 
-    padding: 20px;
+    padding: 18px;
     border-radius: 20px;
 }
 
@@ -45,7 +45,7 @@ h1 {
     font-size: 1.2em;
     font-weight: 700;
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 p {
@@ -53,7 +53,7 @@ p {
     font-size: 1em;
     font-weight: 400;
     padding: 10px 0px;
-    margin-bottom: 10px;
+    margin-bottom: 9px;
 }
 
 div.attribution {
@@ -70,4 +70,10 @@ div.attribution a {
 
 div.attribution a:hover {
     text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    body {
+        background-color: hsl(216, 15%, 48%)
+    }
 }
