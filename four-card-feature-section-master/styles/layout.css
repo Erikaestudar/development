@@ -24,17 +24,6 @@ main {
     }
 }
 
-@media (width >= 48em) {
-    footer.flex {
-        margin-top: 2rem;
-        padding-block: 2rem;
-        text-align: center;
-        align-items: end;
-        display: block;
-        gap: 0.5rem;
-    }
-}
-
 section {
     background-color: var(--white);
     width: 21.5rem;
