@@ -19,6 +19,7 @@
 }
 
 body {
+    width: 100vw;
     min-height: 100vh;
     font-family: var(--ff);
     color: var(--color-text400);
