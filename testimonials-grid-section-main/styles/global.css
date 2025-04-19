@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-purple: hsl(263, 55%, 52%);
+    --border-purple: hsl(264, 82%, 80%);
+    --Purple-50: hsl(260, 100%, 95%);
+
+    --bg-black: hsl(0, 0%, 7%);
+    --bg-dark-blue: hsl(219, 29%, 14%);
+    --bg-grey-500: hsl(217, 19%, 35%);
+    --grey-400: hsl(224, 10%, 45%);
+    --grey-200: hsl(0, 0%, 81%);
+    --grey-100: hsl(214, 17%, 92%);
+    --white: hsl(0, 0%, 100%);
+
+    --ff: "Barlow Semi Condensed", sans-serif;
+}
+
+html {
+    font: 500 0.8125rem/1.5 var(--ff);
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    background-image: linear-gradient(
+        180deg,
+        var(--grey-100) 40%,
+        var(--grey-200) 60%
+    );
+}
+
+img {
+    width: 100%;
+}
+
+.grid {
+    display: grid;
+}
