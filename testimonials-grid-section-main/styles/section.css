@@ -86,9 +86,40 @@ section {
 }
 
 footer div {
+    padding: 1rem;
     width: 100%;
     text-align: center;
     margin-inline: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--bg-purple);
+}
+
+@media (width >= 50em) {
+    .card-01 {
+        position: relative;
+        z-index: 0;
+    }
+
+    .card-01 .quote {
+        width: 8.5rem;
+        height: 8.5rem;
+        position: absolute;
+        background: url(../images/bg-pattern-quotation.svg) no-repeat;
+    }
+}
+
+@media (width < 50em ){
+    main {
+        margin-bottom: 6rem;
+    }
 }
 
 @media (50em < width < 80em) {
@@ -97,6 +128,12 @@ footer div {
         max-width: 90rem;
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
+    }
+
+    .card-01 .quote {
+        top: 0;
+        right: 3rem;
+        z-index: -1;
     }
     
     .card-01 {
@@ -132,6 +169,12 @@ footer div {
         gap: 1.5rem;
     }
     
+    .card-01 .quote {
+        top: 0;
+        right: 5.2rem;
+        z-index: -1;
+    }
+
     .card-01 {
         grid-column: 1 / 3;
         grid-row: 1;
