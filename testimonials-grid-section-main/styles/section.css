@@ -16,15 +16,6 @@ header {
     border-radius: 50%;
 }
 
-h2 {
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-}
-
-h3 {
-    font-weight: 500;
-}
-
 main {
     max-width: 90rem;
     margin-top: 6rem;
