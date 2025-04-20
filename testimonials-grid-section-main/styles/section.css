@@ -40,6 +40,10 @@ section {
 .card-02,
 .card-04 {
     color: var(--white);
+    box-shadow: 0 2px 5px rgb(0 0 0 / .1),
+    0 9px 9px rgb(0 0 0 / .09),
+    0 20px 12px rgb(0 0 0 / .10),
+    0 36px 15px rgb(0 0 0 / .1);
 }
 
 .card-03,
@@ -85,12 +89,12 @@ footer div {
 
 footer a {
     text-decoration: none;
-    color: var(--white);
+    color: var(--bg-purple);
 }
 
 footer a:hover {
     text-decoration: underline;
-    color: var(--bg-purple);
+    color: var(--grey-400);
 }
 
 @media (width >= 50em) {
@@ -155,6 +159,7 @@ footer a:hover {
 
 @media (width >= 80em) {
     main.container {
+        margin-top: 9rem;
         max-width: 90rem;
         grid-template-columns: repeat(4, 1fr);
         gap: 1.5rem;
