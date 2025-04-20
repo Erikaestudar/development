@@ -26,12 +26,8 @@ html {
 
 body {
     width: 100vw;
-    min-height: 100vh;
-    background-image: linear-gradient(
-        180deg,
-        var(--grey-100) 40%,
-        var(--grey-200) 60%
-    );
+    height: 100vh;
+    background-color: var(--grey-100);
 }
 
 img {
