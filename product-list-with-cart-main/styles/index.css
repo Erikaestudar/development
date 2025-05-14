@@ -1,0 +1,318 @@
+@font-face {
+    font-family: "Red Hat Text";
+    src: url(../assets/fonts/static/RedHatText-Regular.ttf) format("truetype");
+    font-weight: 400; /* Regular */
+}
+
+@font-face {
+    font-family: "Red Hat Text";
+    src: url(../assets/fonts/static/RedHatText-SemiBold.ttf) format("truetype");
+    font-weight: 600; /* SemiBold */
+}
+
+@font-face {
+    font-family: "Red Hat Text";
+    src: url(../assets/fonts/static/RedHatText-Bold.ttf) format("truetype");
+    font-weight: 700; /* Bold */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --icon-color: hsl(159, 69%, 38%);
+    --shape-default: hsl(20, 50%, 98%);
+    --shape-hover: hsl(14, 85%, 32%);
+    --shape-checked: hsl(14, 86%, 42%);
+
+    --bg-primary: hsl(13, 31%, 94%);
+    --border: hsl(14, 25%, 72%);
+
+    --text-base: hsl(14, 65%, 9%);
+    --text-secondary: hsl(12, 20%, 44%);
+    --subtitle: hsl(7, 20%, 60%);
+
+    --ff: "Red Hat Text", sans-serif;
+    --px: 1.5rem;
+    --py: 1.5rem;
+    --width: 20.4375rem;
+}
+
+html {
+    color: var(--text-base);
+    font: 400 1rem/1.4 var(--ff);
+}
+
+body {
+    background-color: var(--bg-primary);
+}
+
+h1 {
+    font: 700 2.5rem/140% var(--ff);
+    padding-block: var(--py);
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: var(--shape-checked);
+}
+
+p {
+    color: var(--subtitle);
+}
+
+img {
+    width: 100%;
+}
+
+/* GENERAL LAYOUT */
+.container {
+    --max-width: 375px;
+    width: min(var(--max-width), 100% - var(--px) * 2);
+    margin-inline: auto;
+    border: 1px solid red;
+}
+
+section.menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu-inner div.img {
+    max-width: 23.4375rem;
+    height: 13rem;
+    margin-bottom: 2rem;
+
+    border-radius: .5rem;
+    border: 1.5px solid red;
+}
+
+.cart-button img {
+    width: 1.5rem;
+}
+
+.cart-button {
+    padding: .75rem 1.5rem;
+    background-color: var(--shape-default);
+    border: 1px solid var(--text-secondary);
+    border-radius: 30rem;
+    cursor: pointer;
+
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: .5rem;
+    
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translateX(-50%);
+}
+
+.cart-button:hover {
+    border-color: var(--shape-checked);
+    color: var(--shape-checked);
+}
+
+.menu-inner {
+    margin-bottom: 1rem;
+    max-width: 23.4375rem;
+    border: 1px solid green;
+    position: relative;
+}
+
+.menu-inner h3 + span::before {
+    content: "$";
+    color: var(--shape-checked);
+    font-weight: 600;
+}
+
+.menu-inner h3 + span {
+    color: var(--shape-checked);
+    font-weight: 600;
+}
+
+aside .container {
+    margin-block: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background-color: var(--shape-default);
+}
+
+aside .cart-wrapper {
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside .cart-wrapper img {
+    max-width: 9.375rem;
+    height: auto;
+    object-fit: cover;
+    padding-block: 1rem;
+}
+
+/* MENU CART IMAGES MOBILE */
+.menu-inner #waffle {
+    background: url(../assets/images/mobile/image-waffle-mobile.jpg) no-repeat center/cover;
+}
+
+.menu-inner #creme-brulee {
+    background: url(../assets/images/mobile/image-creme-brulee-mobile.jpg) no-repeat center/cover;
+}
+
+.menu-inner #macaron {
+    background: url(../assets/images/mobile/image-macaron-mobile.jpg) no-repeat center/cover;
+}
+
+.menu-inner #tiramisu {
+    background: url(../assets/images/mobile/image-tiramisu-mobile.jpg) no-repeat center/cover;
+}
+
+.menu-inner #baklava {
+    background: url(../assets/images/mobile/image-baklava-mobile.jpg) no-repeat center/cover;
+}
+
+.menu-inner #pie {
+    background: url(../assets/images/mobile/image-meringue-mobile.jpg) no-repeat center/cover;
+}
+
+.menu-inner #cake {
+    background: url(../assets/images/mobile/image-cake-mobile.jpg) no-repeat center/cover;
+}
+
+.menu-inner #brownie {
+    background: url(../assets/images/mobile/image-brownie-mobile.jpg) no-repeat center/cover;
+}
+
+.menu-inner #panna-cotta {
+    background: url(../assets/images/mobile/image-panna-cotta-mobile.jpg) no-repeat center/cover;
+}
+
+@media (45em < width < 80em) {
+        .container {
+        --max-width: 48rem;
+    }
+
+    section.menu-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20.125rem, 1fr));
+        gap: 1rem;
+    }
+
+    /* MENU CART IMAGES TABLET */
+    .menu-inner #waffle {
+        background: url(../assets/images/tablet/image-waffle-tablet.jpg) no-repeat center/cover;
+    }
+
+    .menu-inner #creme-brulee {
+        background: url(../assets/images/tablet/image-creme-brulee-tablet.jpg) no-repeat center/cover;
+    }
+
+    .menu-inner #macaron {
+        background: url(../assets/images/tablet/image-macaron-tablet.jpg) no-repeat center/cover;
+    }
+
+    .menu-inner #tiramisu {
+        background: url(../assets/images/tablet/image-tiramisu-tablet.jpg) no-repeat center/cover;
+    }
+
+    .menu-inner #baklava {
+        background: url(../assets/images/tablet/image-baklava-tablet.jpg) no-repeat center/cover;
+    }
+
+    .menu-inner #pie {
+        background: url(../assets/images/tablet/image-meringue-tablet.jpg) no-repeat center/cover;
+    }
+
+    .menu-inner #cake {
+        background: url(../assets/images/tablet/image-cake-tablet.jpg) no-repeat center/cover;
+    }
+
+    .menu-inner #brownie {
+        background: url(../assets/images/tablet/image-brownie-tablet.jpg) no-repeat center/cover;
+    }
+
+    .menu-inner #panna-cotta {
+        background: url(../assets/images/tablet/image-panna-cotta-tablet.jpg) no-repeat center/cover;
+    }
+}
+
+@media (width >= 80em) {
+    :root {
+        --px: 0rem;
+        --py: 4rem 1.5rem;
+        --width: 30rem;
+    }
+    
+    #app {
+        padding-inline: 4rem;
+        margin-inline: center;
+        display: grid;
+        grid-template-columns: 74% 26%;
+        align-content: center;
+        gap: 1.5rem;
+    }
+
+    .container {
+        --max-width: 80rem;
+    }
+
+    section.menu-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20.125rem, 1fr));
+        gap: 1rem;
+    }
+
+    .menu-inner .img {
+        max-width: 21.375rem;
+        height: 20.125rem;
+    }
+
+    /* MENU CART IMAGES DESKTOP */
+    .menu-inner #waffle {
+        background: url(../assets/images/desktop/image-waffle-desktop.jpg) no-repeat center/cover;
+    }
+
+    .menu-inner #creme-brulee {
+        background: url(../assets/images/desktop/image-creme-brulee-desktop.jpg) no-repeat center/cover;
+    }
+
+    .menu-inner #macaron {
+        background: url(../assets/images/desktop/image-macaron-desktop.jpg) no-repeat center/cover;
+    }
+        
+    .menu-inner #tiramisu {
+        background: url(../assets/images/desktop/image-tiramisu-desktop.jpg) no-repeat center/cover;
+    }
+
+    .menu-inner #baklava {
+        background: url(../assets/images/desktop/image-baklava-desktop.jpg) no-repeat center/cover;
+    }
+
+    .menu-inner #pie {
+        background: url(../assets/images/desktop/image-meringue-desktop.jpg) no-repeat center/cover;
+    }
+
+    .menu-inner #cake {
+        background: url(../assets/images/desktop/image-cake-desktop.jpg) no-repeat center/cover;
+    }
+
+    .menu-inner #brownie {
+        background: url(../assets/images/desktop/image-brownie-desktop.jpg) no-repeat center/cover;
+    }
+
+    .menu-inner #panna-cotta {
+        background: url(../assets/images/desktop/image-panna-cotta-desktop.jpg) no-repeat center/cover;
+    }
+
+    aside {
+        padding-top: 3rem;
+    }
+}
