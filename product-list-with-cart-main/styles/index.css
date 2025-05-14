@@ -74,7 +74,6 @@ img {
     --max-width: 375px;
     width: min(var(--max-width), 100% - var(--px) * 2);
     margin-inline: auto;
-    border: 1px solid red;
 }
 
 section.menu-wrapper {
@@ -85,7 +84,7 @@ section.menu-wrapper {
 
 .menu-inner div.img {
     max-width: 23.4375rem;
-    height: 13rem;
+    height: 14rem;
     margin-bottom: 2rem;
 
     border-radius: .5rem;
@@ -97,7 +96,7 @@ section.menu-wrapper {
 }
 
 .cart-button {
-    padding: .75rem 1.5rem;
+    padding: .5rem 1.5rem;
     background-color: var(--shape-default);
     border: 1px solid var(--text-secondary);
     border-radius: 30rem;
@@ -122,8 +121,9 @@ section.menu-wrapper {
 .menu-inner {
     margin-bottom: 1rem;
     max-width: 23.4375rem;
-    border: 1px solid green;
+    height: auto;
     position: relative;
+           border: 1px solid blue;
 }
 
 .menu-inner h3 + span::before {
@@ -202,8 +202,17 @@ aside .cart-wrapper img {
 
     section.menu-wrapper {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(20.125rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(18.5rem, 1fr));
         gap: 1rem;
+    }
+
+    .menu-inner {
+        max-width: 18.5rem;
+    }
+
+    .menu-inner div.img {
+        max-width: 18.5rem;
+        height: 18.5rem;
     }
 
     /* MENU CART IMAGES TABLET */
@@ -266,13 +275,17 @@ aside .cart-wrapper img {
 
     section.menu-wrapper {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(20.125rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
         gap: 1rem;
     }
 
-    .menu-inner .img {
-        max-width: 21.375rem;
-        height: 20.125rem;
+    .menu-inner {
+        width: 21.375rem;
+    }
+
+    .menu-inner div.img {
+        width: 21.375rem;
+        height: 20rem;
     }
 
     /* MENU CART IMAGES DESKTOP */
