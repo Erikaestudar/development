@@ -16,18 +16,20 @@ header {
     border-radius: 50%;
 }
 
-main {
+.container {
     max-width: 90rem;
+    height: 100%;
     margin-top: 6rem;
     margin-inline: auto;
     padding-inline: 3rem;
+}
 
+main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(19.4375rem, 1fr));
     grid-template-rows: repeat(5, auto);
     gap: 2.5rem;
 }
-
 
 section {
     width: 100%;
@@ -124,9 +126,14 @@ footer a:hover {
 }
 
 @media (50em < width < 80em) {
-    main.container {
-        margin-inline: auto;
-        max-width: 90rem;
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main {
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
     }
@@ -164,9 +171,14 @@ footer a:hover {
 }
 
 @media (width >= 80em) {
-    main.container {
-        margin-top: 9rem;
-        max-width: 90rem;
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main {
         grid-template-columns: repeat(4, 1fr);
         gap: 1.5rem;
     }

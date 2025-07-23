@@ -26,8 +26,8 @@ html {
 
 body {
     width: 100vw;
-    height: 100%;
-    background-color: var(--grey-100);
+    height: 100vh;
+    background-color: hsl(300, 5%, 96%);;
 }
 
 h1 {
@@ -39,10 +39,12 @@ h1, h2 {
     margin-bottom: 1.5rem;
 }
 
-img {
-    width: 100%;
+span.name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: block;
 }
 
-.grid {
-    display: grid;
+img {
+    width: 100%;
 }
